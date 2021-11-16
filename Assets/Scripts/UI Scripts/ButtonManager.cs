@@ -13,6 +13,7 @@ public class ButtonManager : MonoBehaviour
     public Slider sensSlider;
     public GameObject[] dragableTexts;
     public TextMeshProUGUI linkedText;
+    public GameObject BurocratiousLinkedDoor;
     #endregion
 
     #region Scene Based Buttons
@@ -84,6 +85,14 @@ public class ButtonManager : MonoBehaviour
         linkedText.color = new Color(90f, 0f, 0f);
         linkedText.text = "Jammer, je hebt het fout!";
         linkedText.gameObject.SetActive(true);
+    }
+    public void BurocratieWrongAnswer()
+    {
+
+    }
+    public void BurocratieRightAnswer()
+    {
+        BurocratiousLinkedDoor.SetActive(true);
     }
     #endregion
 }
