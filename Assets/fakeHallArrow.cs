@@ -15,5 +15,10 @@ public class fakeHallArrow : MonoBehaviour
             gameObject.SetActive(false);
         }
         //Debug.Log(mainCamera.transform.eulerAngles);
+        
+    }
+    void OnDisable()
+    {
+        text.SetActive(false);
     }
 }
