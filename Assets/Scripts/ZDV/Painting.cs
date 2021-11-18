@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Painting : MonoBehaviour
 {
+    public GameObject Info;
     public GameObject huisVestingWorld;
     public GameObject bedrijfWorld;
     public GameObject onderWijsWorld;
@@ -60,18 +61,21 @@ public class Painting : MonoBehaviour
      
         if (Input.GetMouseButtonDown(0)&& Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == huisVestingWorldPainting.name && clicked == false)
         {
+            Info.SetActive(false);
             huisVestingAnim.SetBool("huisvestingBool", true);
             clicked = true;
             huisvesting.SetActive(true);
         }
         if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == bedrijfWorldPainting.name && clicked == false)
         {
+            Info.SetActive(false);
             bedrijfAnim.SetBool("bedrijfBool", true);
             clicked = true;
             bedrijfInfo.SetActive(true);
         }
         if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == onderWijsWorldPainting.name && clicked == false)
         {
+            Info.SetActive(false);
             onderwijsAnim.SetBool("onderwijsSelected", true);
             clicked = true;
             onderwijsInfo.SetActive(true);
@@ -79,12 +83,14 @@ public class Painting : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == sameWerkingWorldPainting.name && clicked == false)
         {
+            Info.SetActive(false);
             SamenwerkenAnim.SetBool("SamenWerkenBool", true);
             clicked = true;
             samenwerkenInfo.SetActive(true);
         }
         if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == wethouderWorldPainting.name && clicked == false)
         {
+            Info.SetActive(false);
             AmbtenarenAnim.SetBool("AmbtenarenBool", true);
             clicked = true;
             wethouderInfo.SetActive(true);
@@ -92,6 +98,7 @@ public class Painting : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == justitieWorldPainting.name && clicked == false)
         {
+            Info.SetActive(false);
             clicked = true;
             wetInfo.SetActive(true);
             wetAnim.SetBool("WetBool", true);
