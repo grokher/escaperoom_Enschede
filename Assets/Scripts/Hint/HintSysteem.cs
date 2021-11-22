@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HintSysteem : MonoBehaviour
@@ -52,102 +50,7 @@ public class HintSysteem : MonoBehaviour
         ArchiefKamerInfo.SetActive(false);
         TorenInfo.SetActive(false);
     }
-    public void page1()
-    {
-        if (!koffiekamerBool)
-        {
-            koffiekamerInfo.SetActive(true);
-            MozaiekKamerInfo.SetActive(false);
-            BurgerZaalInfo.SetActive(false);
-            RaadZaalInfo.SetActive(false);
-            TrouwZaalInfo.SetActive(false);
-            BurgermeestersKamerInfo.SetActive(false);
-            FriedhoffInfo.SetActive(false);
-            MachineKamerInfo.SetActive(false);
-            ArchiefKamerInfo.SetActive(false);
-            TorenInfo.SetActive(false);
-        }
-    }
-    public void page2()
-    {
-        if (!BurgerZaalBool)
-        {
-            BurgerZaalInfo.SetActive(true);
-            RaadZaalInfo.SetActive(false);
-            TrouwZaalInfo.SetActive(false);
-            BurgermeestersKamerInfo.SetActive(false);
-            FriedhoffInfo.SetActive(false);
-            MachineKamerInfo.SetActive(false);
-            ArchiefKamerInfo.SetActive(false);
-            TorenInfo.SetActive(false);
-             koffiekamerInfo.SetActive(false);
-            MozaiekKamerInfo.SetActive(false);
-        }
-    }
-    public void page3()
-    {
-        if (!BurgermeestersKamerBool)
-        {
-            BurgermeestersKamerInfo.SetActive(true);
-            FriedhoffInfo.SetActive(false);
-            MachineKamerInfo.SetActive(false);
-            ArchiefKamerInfo.SetActive(false);
-            TorenInfo.SetActive(false);
-            koffiekamerInfo.SetActive(false);
-            MozaiekKamerInfo.SetActive(false);
-            BurgerZaalInfo.SetActive(false);
-            RaadZaalInfo.SetActive(false);
-            TrouwZaalInfo.SetActive(false);
-        }
-    }
-    public void page4()
-    {
-        if (!FriedHoffBool)
-        {
-            FriedhoffInfo.SetActive(true);
-            MachineKamerInfo.SetActive(false);
-            ArchiefKamerInfo.SetActive(false);
-            TorenInfo.SetActive(false);
-            koffiekamerInfo.SetActive(false);
-            MozaiekKamerInfo.SetActive(false);
-            BurgerZaalInfo.SetActive(false);
-            RaadZaalInfo.SetActive(false);
-            TrouwZaalInfo.SetActive(false);
-            BurgermeestersKamerInfo.SetActive(false);
-        }
-    }
-    public void page5()
-    {
-        if (!RaadZaalBool)
-        {
-            RaadZaalInfo.SetActive(true);
-            TrouwZaalInfo.SetActive(false);
-            BurgermeestersKamerInfo.SetActive(false);
-            FriedhoffInfo.SetActive(false);
-            MachineKamerInfo.SetActive(false);
-            ArchiefKamerInfo.SetActive(false);
-            TorenInfo.SetActive(false);
-            koffiekamerInfo.SetActive(false);
-            MozaiekKamerInfo.SetActive(false);
-            BurgerZaalInfo.SetActive(false);
-        }
-    }
-    public void page6()
-    {
-        if (!MozaiekKamerBool)
-        {
-            MozaiekKamerInfo.SetActive(true);
-            BurgerZaalInfo.SetActive(false);
-            RaadZaalInfo.SetActive(false);
-            TrouwZaalInfo.SetActive(false);
-            BurgermeestersKamerInfo.SetActive(false);
-            FriedhoffInfo.SetActive(false);
-            MachineKamerInfo.SetActive(false);
-            ArchiefKamerInfo.SetActive(false);
-            TorenInfo.SetActive(false);
-            koffiekamerInfo.SetActive(false);
-        }
-    }
+ 
     // Update is called once per frame
     void Update()
     {
