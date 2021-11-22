@@ -12,7 +12,7 @@ public class fakeHallArrow : MonoBehaviour
         if (mainCamera.GetComponent<MouseSelect>().activated && mainCamera.GetComponent<MouseSelect>().raycastHit.name == gameObject.name)
         {
             text.SetActive(true);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
         //Debug.Log(mainCamera.transform.eulerAngles);
         
