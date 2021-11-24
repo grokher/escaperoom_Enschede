@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5190293, g: 0.48457712, b: 0.46638477, a: 1}
+  m_IndirectSpecularColor: {r: 0.5183234, g: 0.4837811, b: 0.46456665, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10511,6 +10511,10 @@ PrefabInstance:
       propertyPath: correctAnswer
       value: goeie
       objectReference: {fileID: 0}
+    - target: {fileID: 7593252066224387204, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: wrongAnswersText
+      value: 
+      objectReference: {fileID: 595021882}
     - target: {fileID: 7678585013187118850, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: canvas
       value: 
@@ -10563,8 +10567,17 @@ PrefabInstance:
       propertyPath: correctAnswer
       value: eerste
       objectReference: {fileID: 0}
+    - target: {fileID: 8985964443259971828, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: wrongAnswersText
+      value: 
+      objectReference: {fileID: 595021882}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232388774545d204b9853a50b40af92c, type: 3}
+--- !u!1 &595021882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4926114340956149798, guid: 232388774545d204b9853a50b40af92c, type: 3}
+  m_PrefabInstance: {fileID: 595021881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &608696929
 GameObject:
   m_ObjectHideFlags: 0
@@ -16490,6 +16503,8 @@ MonoBehaviour:
   correctAnswer: moedige
   dragableTexts: []
   correctslotCounter: 0
+  inslotCounter: 0
+  wrongAnswersText: {fileID: 595021882}
 --- !u!1 &896200271
 GameObject:
   m_ObjectHideFlags: 0

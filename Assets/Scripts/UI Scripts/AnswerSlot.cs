@@ -10,6 +10,7 @@ public class AnswerSlot : MonoBehaviour, IDropHandler
     public GameObject[] dragableTexts;
     public int correctslotCounter = 0;
     public int inslotCounter = 0;
+    public GameObject wrongAnswersText;
     void Start()
     {
          dragableTexts = GameObject.FindGameObjectsWithTag("DragableText");
@@ -23,7 +24,7 @@ public class AnswerSlot : MonoBehaviour, IDropHandler
         Debug.Log("OnDrop");
         if(eventData.pointerDrag != null)
         {
-
+            wrongAnswersText.SetActive(false);
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             eventData.pointerDrag.GetComponent<DragDrop>().inSlot = true;
             Debug.Log("Correct answer " + correctAnswer);
@@ -58,6 +59,7 @@ public class AnswerSlot : MonoBehaviour, IDropHandler
                     dragableText.GetComponent<DragDrop>().inSlot = false;
                     dragableText.GetComponent<DragDrop>().CheckPos();
                 }
+                wrongAnswersText.SetActive(true);
             }
         }
         else
