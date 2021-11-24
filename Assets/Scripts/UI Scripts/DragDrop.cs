@@ -12,7 +12,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public bool inSlot = false;
     public bool inCorrectSlot = false;
     private CanvasGroup canvasGroup;
-    public TextMeshProUGUI winText;
+    public GameObject cypherpuzzle;
     private void Awake()
     {
         inSlot = false;
@@ -55,8 +55,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     }
     public void win()
     {
-        winText.color = new Color(0,90,0);
-        winText.text = "Correct, je hebt het goed!";
-        winText.gameObject.SetActive(true);
+        //winText.color = new Color(0,90,0);
+        //winText.text = "Correct, je hebt het goed!";
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseSelect>().inPuzzle = false;
+        cypherpuzzle.SetActive(false);
     }
 }
