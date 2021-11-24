@@ -10133,22 +10133,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 365230360329241262, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_text
-      value: 'eerste
-
-'
+      value: eerste
       objectReference: {fileID: 0}
     - target: {fileID: 365230360329241262, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 365230360329241262, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -3177564893534569391, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+    - target: {fileID: 673591918258249254, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: m_TagString
+      value: DragableText
+      objectReference: {fileID: 0}
     - target: {fileID: 1076587272862709232, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1076587272862709232, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10209,22 +10211,38 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1490135015}
+    - target: {fileID: 1169036136846384984, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: cypherpuzzle
+      value: 
+      objectReference: {fileID: 1180014871}
     - target: {fileID: 1383158868955893654, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1383158868955893654, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -3177564893534569391, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+    - target: {fileID: 1650329235406194217, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: m_TagString
+      value: DragableText
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851104547139124346, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: m_TagString
+      value: DragableText
+      objectReference: {fileID: 0}
     - target: {fileID: 1998521825257037662, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1490135015}
+    - target: {fileID: 1998521825257037662, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: cypherpuzzle
+      value: 
+      objectReference: {fileID: 1180014871}
     - target: {fileID: 2329349492709650641, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2329349492709650641, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10233,10 +10251,14 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1490135015}
+    - target: {fileID: 2344585187145002869, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: cypherpuzzle
+      value: 
+      objectReference: {fileID: 1180014871}
     - target: {fileID: 3246071185710827270, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 3246071185710827270, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10249,14 +10271,30 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1490135015}
+    - target: {fileID: 3470775426186140481, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: cypherpuzzle
+      value: 
+      objectReference: {fileID: 1180014871}
     - target: {fileID: 3759831254705453913, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1490135015}
+    - target: {fileID: 3759831254705453913, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: cypherpuzzle
+      value: 
+      objectReference: {fileID: 1180014871}
+    - target: {fileID: 3787079447910671097, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: m_TagString
+      value: DragableText
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863550870392994033, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: m_TagString
+      value: DragableText
+      objectReference: {fileID: 0}
     - target: {fileID: 4491413077881523559, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4491413077881523559, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10272,7 +10310,7 @@ PrefabInstance:
     - target: {fileID: 4685736585271181313, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4685736585271181313, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10384,7 +10422,7 @@ PrefabInstance:
     - target: {fileID: 4685736586257368480, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4685736586257368480, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10392,7 +10430,7 @@ PrefabInstance:
     - target: {fileID: 4685736586661240386, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4685736586661240386, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10404,11 +10442,15 @@ PrefabInstance:
     - target: {fileID: 4712943265521109737, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4712943265521109737, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -3177564893534569391, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+    - target: {fileID: 5055940808739199108, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: m_TagString
+      value: DragableText
+      objectReference: {fileID: 0}
     - target: {fileID: 5156292369469420757, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -294
@@ -10417,6 +10459,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1490135015}
+    - target: {fileID: 5163947966757141559, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: cypherpuzzle
+      value: 
+      objectReference: {fileID: 1180014871}
     - target: {fileID: 5420819341825953088, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -10424,7 +10470,7 @@ PrefabInstance:
     - target: {fileID: 5469045839292894616, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5469045839292894616, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10433,6 +10479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnswerDrop 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6532836988618905418, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: m_TagString
+      value: DragableText
+      objectReference: {fileID: 0}
     - target: {fileID: 6785167967939653763, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_text
       value: goeie
@@ -10440,7 +10490,7 @@ PrefabInstance:
     - target: {fileID: 6785167967939653763, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6785167967939653763, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10452,7 +10502,7 @@ PrefabInstance:
     - target: {fileID: 7500425448456778140, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 7500425448456778140, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10465,6 +10515,14 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1490135015}
+    - target: {fileID: 7678585013187118850, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: cypherpuzzle
+      value: 
+      objectReference: {fileID: 1180014871}
+    - target: {fileID: 7852251890470178258, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: m_TagString
+      value: DragableText
+      objectReference: {fileID: 0}
     - target: {fileID: 8256431204420369324, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_text
       value: voorzitter van de ANWB
@@ -10472,7 +10530,7 @@ PrefabInstance:
     - target: {fileID: 8256431204420369324, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: fbbf29d0553cb80439ecbb09d5b643da, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8256431204420369324, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10481,6 +10539,14 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1490135015}
+    - target: {fileID: 8281390537244359824, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: cypherpuzzle
+      value: 
+      objectReference: {fileID: 1180014871}
+    - target: {fileID: 8360230569902918129, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: m_TagString
+      value: DragableText
+      objectReference: {fileID: 0}
     - target: {fileID: 8723279556544373550, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: m_Name
       value: AnswerDrop 1
@@ -10489,9 +10555,13 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1490135015}
+    - target: {fileID: 8942648728942954252, guid: 232388774545d204b9853a50b40af92c, type: 3}
+      propertyPath: cypherpuzzle
+      value: 
+      objectReference: {fileID: 1180014871}
     - target: {fileID: 8985964443259971828, guid: 232388774545d204b9853a50b40af92c, type: 3}
       propertyPath: correctAnswer
-      value: 'eerste '
+      value: eerste
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232388774545d204b9853a50b40af92c, type: 3}
@@ -16418,6 +16488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctAnswer: moedige
+  dragableTexts: []
+  correctslotCounter: 0
 --- !u!1 &896200271
 GameObject:
   m_ObjectHideFlags: 0
@@ -19983,6 +20055,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179406379}
   m_CullTransparentMesh: 1
+--- !u!1 &1180014871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4685736585430199746, guid: 232388774545d204b9853a50b40af92c, type: 3}
+  m_PrefabInstance: {fileID: 595021881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1180584785
 GameObject:
   m_ObjectHideFlags: 0
