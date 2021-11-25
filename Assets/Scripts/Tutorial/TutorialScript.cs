@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class TutorialScript : MonoBehaviour
 {
+    public GameObject TutorialArea;
     public GameObject itemPickup;
+    public GameObject bookPickup;
+    public GameObject inspectTool;
     public TextMesh tutorialsText;
     public bool Key;
 
     private void Update()
     {
         StartCoroutine("tutorialScript");
+        bookInspect();
     }
 
    IEnumerator tutorialScript()
@@ -23,5 +27,11 @@ public class TutorialScript : MonoBehaviour
         }
         yield return new WaitForSeconds(2f); 
    }
-    
+    public void bookInspect()
+    {
+        if (bookPickup.GetComponent<pickupableItems>().hasThisItem && !itemPickup.GetComponent<pickupableItems>().hasThisItem)
+        {
+            inspectTool.SetActive(true);
+        }
+    }
 }

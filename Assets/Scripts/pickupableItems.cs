@@ -10,7 +10,12 @@ public class pickupableItems : MonoBehaviour
     #endregion
     private void Update()
     {
-        if (Camera.GetComponent<MouseSelect>().activated && Camera.GetComponent<MouseSelect>().raycastHit.name == gameObject.name  && !hasThisItem)
+        PickUp();
+    }
+
+    public void PickUp()
+    {
+        if (Camera.GetComponent<MouseSelect>().activated && Camera.GetComponent<MouseSelect>().raycastHit.name == gameObject.name && !hasThisItem)
         {
             hasThisItem = true; // als je dus wilt checken of die deze item heeft: //itemObject.GetComponent<pickupableItems>().hasThisItem\\
             this.gameObject.SetActive(false);
