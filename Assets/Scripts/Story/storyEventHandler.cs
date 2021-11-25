@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class storyEventHandler : MonoBehaviour
 {
@@ -52,7 +53,12 @@ public class storyEventHandler : MonoBehaviour
         {
             bode4Done = true;
             m_rawImage.texture = bode5;
-            Timer = 2.75f;
+            //Timer = 2.75f;
+        }
+        if(Timer <= 0 && !bode5Done)
+        {
+            bode5Done = true;
+            SceneManager.LoadScene(3);
         }
     }
 }

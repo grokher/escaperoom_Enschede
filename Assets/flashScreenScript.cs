@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class flashScreenScript : MonoBehaviour
 {
-    private int SceneNumber;
     void Start()
     {
             StartCoroutine(ToMainMenu());
