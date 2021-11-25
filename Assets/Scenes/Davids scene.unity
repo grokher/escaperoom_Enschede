@@ -41878,6 +41878,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctAnswer: moedige
+  dragableTexts: []
+  correctslotCounter: 0
+  inslotCounter: 0
+  wrongAnswersText: {fileID: 0}
 --- !u!65 &7725410215046757072
 BoxCollider:
   m_ObjectHideFlags: 0
