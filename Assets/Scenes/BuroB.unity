@@ -40449,7 +40449,7 @@ MonoBehaviour:
   newCamera: {fileID: 1475492668}
   NewCameraObject: {fileID: 1475492667}
   MozaiekUI: {fileID: 87852978}
-  MozaiekPanel: {fileID: 11287461}
+  MozaiekPanel: {fileID: 3202605414015409203}
   tiles:
   - {fileID: 6789900215270122191}
   - {fileID: 6789900215064874291}

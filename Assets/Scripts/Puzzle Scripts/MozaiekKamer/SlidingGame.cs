@@ -85,7 +85,7 @@ public class SlidingGame : MonoBehaviour
             Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
             emptySpace.GetComponent<SpriteRenderer>().enabled = true;
             player.SetActive(true);
-            MozaiekPanel.SetActive(true);
+            MozaiekPanel.SetActive(false);
         }
     }
     public void Shuffle()
