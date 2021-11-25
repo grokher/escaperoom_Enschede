@@ -9,4 +9,9 @@ public class LookAtObject : MonoBehaviour
     {
         transform.LookAt(LookAtTarget);
     }
+
+    private void Update()
+    {
+        transform.LookAt(LookAtTarget);
+    }
 }
