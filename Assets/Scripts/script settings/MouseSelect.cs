@@ -12,7 +12,7 @@ public class MouseSelect : MonoBehaviour
     public GameObject hitObject;
     private Camera gameCamera;
     public bool activated;
-    bool isClicked;
+    public bool isClicked;
     public bool inPuzzle = false;
     public bool isLerping = false;
 
