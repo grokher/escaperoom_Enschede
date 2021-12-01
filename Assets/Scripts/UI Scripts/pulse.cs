@@ -5,59 +5,37 @@ using UnityEngine.UI;
 
 public class pulse : MonoBehaviour
 {
-    // Grow parameters
-    public float approachSpeed = 0.02f;
-    public float growthBound = 2f;
-    public float shrinkBound = 0.5f;
-    private float currentRatio = 1;
+    Vector3 originalButtonSize;
 
-    // The text object we're trying to manipulate
-    private Text text;
-    private float originalFontSize;
+    int time = 0;
+    public float pulseSpeed;
 
-    // And something to do the manipulating
-    private Coroutine routine;
-    private bool keepGoing = true;
-    private bool closeEnough = false;
-
-    // Attach the coroutine
-    void Awake()
+    private bool doesPulse = true;
+    private void Awake()
     {
-        // Find the text  element we want to use
-        this.text = this.gameObject.GetComponent<Text>();
-
-        // Then start the routine
-        this.routine = StartCoroutine(this.Pulse());
+        originalButtonSize = this.gameObject.transform.localScale;
+    }
+    private void Update()
+    {
+        Pulsing();
     }
 
-    IEnumerator Pulse()
+    void Pulsing()
     {
-        // Run this indefinitely
-        while (keepGoing)
+        if (doesPulse)
         {
-            // Get bigger for a few seconds
-            while (this.currentRatio != this.growthBound)
+            Vector3 newSize;
+            float calculatation = (Mathf.Sin(time * pulseSpeed));
+            if (calculatation < 0)
             {
-                // Determine the new ratio to use
-                currentRatio = Mathf.MoveTowards(currentRatio, growthBound, approachSpeed);
-
-                // Update our text element
-                this.gameObject.transform.localScale = Vector3.one * currentRatio;
-
-                yield return new WaitForEndOfFrame();
+                newSize = originalButtonSize * -calculatation / 4;
             }
-
-            // Shrink for a few seconds
-            while (this.currentRatio != this.shrinkBound)
+            else
             {
-                // Determine the new ratio to use
-                currentRatio = Mathf.MoveTowards(currentRatio, shrinkBound, approachSpeed);
-
-                // Update our GameObject.
-                this.gameObject.transform.localScale = Vector3.one * currentRatio;
-
-                yield return new WaitForEndOfFrame();
+                newSize = originalButtonSize * calculatation / 4;
             }
+            this.transform.localScale = ((originalButtonSize / 4) * 3) + newSize;
+            time++;
         }
     }
 }

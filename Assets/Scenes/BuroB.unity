@@ -4896,6 +4896,7 @@ MonoBehaviour:
   raycastHit: {fileID: 0}
   hitObject: {fileID: 0}
   activated: 0
+  isClicked: 0
   inPuzzle: 0
   isLerping: 0
 --- !u!1 &268190897
@@ -6506,6 +6507,7 @@ GameObject:
   - component: {fileID: 372426624}
   - component: {fileID: 372426623}
   - component: {fileID: 372426622}
+  - component: {fileID: 372426626}
   - component: {fileID: 372426625}
   m_Layer: 0
   m_Name: Cypher Puzzle Activation
@@ -6608,6 +6610,19 @@ MonoBehaviour:
   PuzzleCamera: {fileID: 0}
   linked3DPuzzle: {fileID: 0}
   highlight: {fileID: 372426620}
+--- !u!114 &372426626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372426620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227c4bc266dbd9941b857fc46f8c0ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseSpeed: 0.002
 --- !u!1 &383532488
 GameObject:
   m_ObjectHideFlags: 0
@@ -9385,6 +9400,7 @@ GameObject:
   - component: {fileID: 579021065}
   - component: {fileID: 579021064}
   - component: {fileID: 579021063}
+  - component: {fileID: 579021068}
   - component: {fileID: 579021067}
   m_Layer: 0
   m_Name: Dial Puzzle highlight
@@ -9498,6 +9514,19 @@ MonoBehaviour:
   PuzzleCamera: {fileID: 4671015399916093278}
   linked3DPuzzle: {fileID: 4671015401334278964}
   highlight: {fileID: 579021061}
+--- !u!114 &579021068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579021061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227c4bc266dbd9941b857fc46f8c0ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseSpeed: 0.002
 --- !u!1 &584455063
 GameObject:
   m_ObjectHideFlags: 0
@@ -10864,6 +10893,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16.06, y: 8.27, z: 1}
   m_Center: {x: -0.91, y: 1.17, z: -4.5}
+--- !u!114 &641436641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641436638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227c4bc266dbd9941b857fc46f8c0ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseSpeed: 0.002
 --- !u!1 &641972737
 GameObject:
   m_ObjectHideFlags: 0
@@ -46546,6 +46588,7 @@ MonoBehaviour:
   raycastHit: {fileID: 0}
   hitObject: {fileID: 0}
   activated: 0
+  isClicked: 0
   inPuzzle: 0
   isLerping: 0
 --- !u!1 &3863691992938718413
@@ -54036,6 +54079,7 @@ MonoBehaviour:
   raycastHit: {fileID: 0}
   hitObject: {fileID: 0}
   activated: 0
+  isClicked: 0
   inPuzzle: 1
   isLerping: 0
 --- !u!20 &4671015399916093266
@@ -69342,6 +69386,7 @@ GameObject:
   - component: {fileID: 5905122281332656854}
   - component: {fileID: 5905122281332656849}
   - component: {fileID: 5905122281332656848}
+  - component: {fileID: 5905122281332656852}
   - component: {fileID: 5905122281332656855}
   m_Layer: 0
   m_Name: buro cube
@@ -69364,6 +69409,19 @@ Transform:
   m_Father: {fileID: 5905122281289735305}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -48.119, z: 0}
+--- !u!114 &5905122281332656852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5905122281332656850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227c4bc266dbd9941b857fc46f8c0ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pulseSpeed: 0.002
 --- !u!33 &5905122281332656854
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -72640,6 +72698,7 @@ MonoBehaviour:
   raycastHit: {fileID: 0}
   hitObject: {fileID: 0}
   activated: 0
+  isClicked: 0
   inPuzzle: 0
   isLerping: 0
 --- !u!4 &8545313950947940639
