@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class burgerzaalAnimHandler : MonoBehaviour
 {
+    private MouseSelect mouseSelect;
     [Header("Animators")]
     public Animator pane1;
     public Animator pane2;
@@ -13,6 +14,7 @@ public class burgerzaalAnimHandler : MonoBehaviour
     public Animator pane6;
     public Animator pane7;
     public Animator rotator;
+    public Animator cameraAnim;
     [Header("panelObjects")]
     public GameObject pane1obj;
     public GameObject pane2obj;
@@ -28,10 +30,16 @@ public class burgerzaalAnimHandler : MonoBehaviour
     private bool pane5done = false;
     private bool pane6done = false;
     private bool pane7done = false;
-
+    private bool introDone = false;
+    [Header("Camera")]
+    public GameObject animCam;
+    public GameObject mainCam;
+    [Header("win condition = 7")]
+    public int winCounter = 0;
     // Start is called before the first frame update
     void Start()
     {
+        pane1obj.SetActive(false);
         pane2obj.SetActive(false);
         pane3obj.SetActive(false);
         pane4obj.SetActive(false);
@@ -43,57 +51,73 @@ public class burgerzaalAnimHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pane1.GetCurrentAnimatorStateInfo(0).IsName("donePlaying")&&!pane1done)
+        if (!introDone)
         {
-            pane1done = true;
-            pane2obj.SetActive(true);
-            pane2.Play("Panel2Start");
+            animCam.SetActive(true);
+            mainCam.SetActive(false);
+            cameraAnim.Play("IntroAnim");
+            introDone = true;
         }
-        if (pane2.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane2done)
+        if(cameraAnim.GetCurrentAnimatorStateInfo(0).IsName("donePlaying")&&introDone)
         {
-            pane2done = true;
-            pane3obj.SetActive(true);
-            pane3.Play("Panel3Start");
+            animCam.SetActive(false);
+            mainCam.SetActive(true);
         }
-        if (pane3.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane3done)
+        if (winCounter == 7)
         {
-            pane3done = true;
-            pane4obj.SetActive(true);
-            pane4.Play("Panel4Start");
-        }
-        if (pane4.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane4done)
-        {
-            pane4done = true;
-            pane5obj.SetActive(true);
-            pane5.Play("Panel5Start");
-        }
-        if (pane5.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane5done)
-        {
-            pane5done = true;
-            pane6obj.SetActive(true);
-            pane6.Play("Panel6Start");
-        }
-        if (pane6.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane6done)
-        {
-            pane6done = true;
-            pane7obj.SetActive(true);
-            pane7.Play("Panel7Start");
-        }
-        if (pane7.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane7done)
-        {
-            pane7done = true;
-            rotator.Play("Rotate");
-        }
-        if (rotator.GetCurrentAnimatorStateInfo(0).IsName("donePlaying"))
-        {
-            pane1.Play("Panel1");
-            pane2.Play("Panel2");
-            pane3.Play("Panel3");
-            pane4.Play("Panel4");
-            pane5.Play("Panel5");
-            pane6.Play("Panel6");
-            pane7.Play("Panel7");
+            pane1obj.SetActive(true);
+            if (pane1.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane1done)
+            {
+                pane1done = true;
+                pane2obj.SetActive(true);
+                pane2.Play("Panel2Start");
+            }
+            if (pane2.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane2done)
+            {
+                pane2done = true;
+                pane3obj.SetActive(true);
+                pane3.Play("Panel3Start");
+            }
+            if (pane3.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane3done)
+            {
+                pane3done = true;
+                pane4obj.SetActive(true);
+                pane4.Play("Panel4Start");
+            }
+            if (pane4.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane4done)
+            {
+                pane4done = true;
+                pane5obj.SetActive(true);
+                pane5.Play("Panel5Start");
+            }
+            if (pane5.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane5done)
+            {
+                pane5done = true;
+                pane6obj.SetActive(true);
+                pane6.Play("Panel6Start");
+            }
+            if (pane6.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane6done)
+            {
+                pane6done = true;
+                pane7obj.SetActive(true);
+                pane7.Play("Panel7Start");
+            }
+            if (pane7.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane7done)
+            {
+                pane7done = true;
+                rotator.Play("Rotate");
+            }
+            if (rotator.GetCurrentAnimatorStateInfo(0).IsName("donePlaying"))
+            {
+                pane1.Play("Panel1");
+                pane2.Play("Panel2");
+                pane3.Play("Panel3");
+                pane4.Play("Panel4");
+                pane5.Play("Panel5");
+                pane6.Play("Panel6");
+                pane7.Play("Panel7");
 
+            }
         }
     }
 }
