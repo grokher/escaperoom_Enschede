@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class skyboxRotation : MonoBehaviour
 {
@@ -8,12 +9,14 @@ public class skyboxRotation : MonoBehaviour
     public Material skyboxArea;
     public GameObject CurrentArea;
     public GameObject NextArea;
+    public TextMeshProUGUI locationTexts;
     public void NextAreaOnClick()
     {
         Debug.Log("Change F Area");
         RenderSettings.skybox = skyboxArea;
         CurrentArea.SetActive(false);
         NextArea.SetActive(true);
+        locationTexts.text = NextArea.name;
     }
 
     public void Update()
