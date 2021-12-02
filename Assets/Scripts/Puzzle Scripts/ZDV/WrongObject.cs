@@ -12,8 +12,8 @@ public class WrongObject : MonoBehaviour
     {
         if (Camera.main.GetComponent<MouseSelect>().raycastHit.name == gameObject.name)
         { 
-            eventsystem.GetComponent<ZDVCounter>().Counter++;
-            Debug.Log(eventsystem.GetComponent<ZDVCounter>().Counter);
+            eventsystem.GetComponent<ZDVCounter>().panelCounter++;
+            Debug.Log(eventsystem.GetComponent<ZDVCounter>().panelCounter);
             gameObject.SetActive(false);
         }
 
