@@ -7,25 +7,18 @@ using UnityEngine.Audio;
 public class PositiveResponse : MonoBehaviour
 {
     #region
-    GameObject Camera = GameObject.FindGameObjectWithTag("MainCamera");
+    private GameObject mainCamera;
+    public AudioSource audioSource;
     public AudioClip rewardingSound;
     #endregion
     private void Awake()
     {
-
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        audioSource = mainCamera.GetComponent<AudioSource>();
     }
-    void Start()
+    public void Response()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void Response()
-    {
-        
+        audioSource.clip = rewardingSound;
+        audioSource.Play();
     }
 }
