@@ -18,9 +18,4 @@ public class skyboxRotation : MonoBehaviour
         NextArea.SetActive(true);
         locationTexts.text = NextArea.name;
     }
-
-    public void Update()
-    {
-        Debug.Log(CurrentArea);
-    }
 }

@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MapScript : MonoBehaviour
 {
-    public Color mapColor;
-    public GameObject floorImage, floorImage1, floorImage2;
+    public GameObject mainFloor, firstFloor;
 
-    public void OnFloorButtonClick()
+    public void floorButtonMain0()
     {
-        mapColor.a = 1;
+        firstFloor.GetComponent<Image>().color = new Color(1, 1, 1, 0.2f);
+        mainFloor.GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }
 
-    public void OnOtherFloorButton()
+    public void floorButton1()
     {
-        mapColor.a = 0.25f;
+        mainFloor.GetComponent<Image>().color = new Color(1, 1, 1, 0.2f);
+        firstFloor.GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }
 }
