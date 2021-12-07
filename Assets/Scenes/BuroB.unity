@@ -3718,6 +3718,14 @@ MonoBehaviour:
   MachineKamerButton: {fileID: 1913843228686321605}
   ArchiefKamerButton: {fileID: 0}
   TorenButton: {fileID: 0}
+  newBookNotification: {fileID: 0}
+  pageNotification: {fileID: 0}
+  pageNotification1: {fileID: 0}
+  pageNotification2: {fileID: 0}
+  pageNotification3: {fileID: 0}
+  pageNotification4: {fileID: 0}
+  pageNotification5: {fileID: 0}
+  pageNotification6: {fileID: 0}
 --- !u!114 &169621182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10100,6 +10108,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 24a7c7bfe827b534589b856f4cda65f7, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 1722708493}
+  locationTexts: {fileID: 0}
 --- !u!114 &594033972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14604,6 +14613,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 48ee4d4074967c5488c3ebb50023540b, type: 2}
   CurrentArea: {fileID: 1628491724}
   NextArea: {fileID: 2097409512}
+  locationTexts: {fileID: 0}
 --- !u!114 &811060408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24437,6 +24447,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 1347d668e9ffd1c44a00ba6b2342e34d, type: 2}
   CurrentArea: {fileID: 1628491724}
   NextArea: {fileID: 15304099}
+  locationTexts: {fileID: 0}
 --- !u!212 &1674068569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25365,6 +25376,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 311d4d68e77525a44b72b70468707885, type: 2}
   CurrentArea: {fileID: 1628491724}
   NextArea: {fileID: 896200271}
+  locationTexts: {fileID: 0}
 --- !u!65 &1716076323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27638,6 +27650,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 5cf5713fdbd4dd2459f82d25cce4ad36, type: 2}
   CurrentArea: {fileID: 896200271}
   NextArea: {fileID: 1628491724}
+  locationTexts: {fileID: 0}
 --- !u!212 &1839670711
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35885,6 +35898,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: fb56326b2b4c04640a718fa0273d3873, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 1628491724}
+  locationTexts: {fileID: 0}
 --- !u!114 &92997078272972458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35900,6 +35914,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: c949c206b0b82214da709eeffadecd18, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 902226040}
+  locationTexts: {fileID: 0}
 --- !u!114 &92997078803987512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35915,6 +35930,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 2fca4c3207bf88f49bbd6e74dad2e4eb, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 1919200307}
+  locationTexts: {fileID: 0}
 --- !u!114 &92997078965197607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35930,6 +35946,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 49bf28cd5bfaa4640b85a721d3e0ada5, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 18285354}
+  locationTexts: {fileID: 0}
 --- !u!114 &92997079111991029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35945,6 +35962,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: df5008450d9c51042a8e5b7d2480cd30, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 568532550}
+  locationTexts: {fileID: 0}
 --- !u!1 &167646572534838487
 GameObject:
   m_ObjectHideFlags: 0
@@ -44318,6 +44336,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 5cf5713fdbd4dd2459f82d25cce4ad36, type: 2}
   CurrentArea: {fileID: 2292216474776207978}
   NextArea: {fileID: 1628491724}
+  locationTexts: {fileID: 0}
 --- !u!1 &2292216474124822763
 GameObject:
   m_ObjectHideFlags: 0
@@ -49831,7 +49850,7 @@ MonoBehaviour:
   clicked: 0
   onderwijsAnim: {fileID: 3863691992900665296}
   wetAnim: {fileID: 3863691992976893295}
-  AmbtenarenAnim: {fileID: 3863691992976893295}
+  AmbtenarenAnim: {fileID: 3863691992651804771}
   SamenwerkenAnim: {fileID: 3863691993479653743}
   huisVestingAnim: {fileID: 3863691994354562676}
   bedrijfAnim: {fileID: 3863691993995570484}
@@ -52837,6 +52856,7 @@ GameObject:
   - component: {fileID: 3863691994454794943}
   - component: {fileID: 3863691994454794936}
   - component: {fileID: 3863691994454794937}
+  - component: {fileID: 3863691994454794941}
   m_Layer: 5
   m_Name: Fade
   m_TagString: Untagged
@@ -52844,6 +52864,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &3863691994454794941
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3863691994454794940}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c080d3f111771b46891b754442ebb12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &3863691994454794943
 RectTransform:
   m_ObjectHideFlags: 0

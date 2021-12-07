@@ -152,7 +152,7 @@ public class Painting : MonoBehaviour
     public void wethouderStart()
     {
         animController.SetBool("hasClicked", true);
-        wetAnim.SetBool("AmbtenarenBool", false);
+       AmbtenarenAnim.SetBool("AmbtenarenBool", false);
         wethouderWorld.SetActive(true);
         thisWorld.SetActive(false);
         wethouderInfo.SetActive(false);
