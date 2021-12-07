@@ -1428,6 +1428,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9241818}
+  - {fileID: 1536618665}
   m_Father: {fileID: 2053748081}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3718,6 +3719,14 @@ MonoBehaviour:
   MachineKamerButton: {fileID: 1913843228686321605}
   ArchiefKamerButton: {fileID: 0}
   TorenButton: {fileID: 0}
+  newBookNotification: {fileID: 0}
+  pageNotification: {fileID: 0}
+  pageNotification1: {fileID: 0}
+  pageNotification2: {fileID: 0}
+  pageNotification3: {fileID: 0}
+  pageNotification4: {fileID: 0}
+  pageNotification5: {fileID: 0}
+  pageNotification6: {fileID: 0}
 --- !u!114 &169621182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10100,6 +10109,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 24a7c7bfe827b534589b856f4cda65f7, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 1722708493}
+  locationTexts: {fileID: 0}
 --- !u!114 &594033972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14604,6 +14614,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 48ee4d4074967c5488c3ebb50023540b, type: 2}
   CurrentArea: {fileID: 1628491724}
   NextArea: {fileID: 2097409512}
+  locationTexts: {fileID: 0}
 --- !u!114 &811060408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22475,6 +22486,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523407628}
   m_CullTransparentMesh: 1
+--- !u!1 &1536618664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1536618665}
+  - component: {fileID: 1536618667}
+  m_Layer: 0
+  m_Name: Video Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1536618665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536618664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 70212279}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1536618667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536618664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d22b95ce5ff07a47ada42c446051c2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoClip: {fileID: 32900000, guid: 93efdfc13dfcb6d4da325908396a5a85, type: 3}
 --- !u!1 &1537588493
 GameObject:
   m_ObjectHideFlags: 0
@@ -24437,6 +24492,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 1347d668e9ffd1c44a00ba6b2342e34d, type: 2}
   CurrentArea: {fileID: 1628491724}
   NextArea: {fileID: 15304099}
+  locationTexts: {fileID: 0}
 --- !u!212 &1674068569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25365,6 +25421,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 311d4d68e77525a44b72b70468707885, type: 2}
   CurrentArea: {fileID: 1628491724}
   NextArea: {fileID: 896200271}
+  locationTexts: {fileID: 0}
 --- !u!65 &1716076323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27638,6 +27695,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 5cf5713fdbd4dd2459f82d25cce4ad36, type: 2}
   CurrentArea: {fileID: 896200271}
   NextArea: {fileID: 1628491724}
+  locationTexts: {fileID: 0}
 --- !u!212 &1839670711
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35885,6 +35943,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: fb56326b2b4c04640a718fa0273d3873, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 1628491724}
+  locationTexts: {fileID: 0}
 --- !u!114 &92997078272972458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35900,6 +35959,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: c949c206b0b82214da709eeffadecd18, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 902226040}
+  locationTexts: {fileID: 0}
 --- !u!114 &92997078803987512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35915,6 +35975,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 2fca4c3207bf88f49bbd6e74dad2e4eb, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 1919200307}
+  locationTexts: {fileID: 0}
 --- !u!114 &92997078965197607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35930,6 +35991,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 49bf28cd5bfaa4640b85a721d3e0ada5, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 18285354}
+  locationTexts: {fileID: 0}
 --- !u!114 &92997079111991029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35945,6 +36007,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: df5008450d9c51042a8e5b7d2480cd30, type: 2}
   CurrentArea: {fileID: 2097409512}
   NextArea: {fileID: 568532550}
+  locationTexts: {fileID: 0}
 --- !u!1 &167646572534838487
 GameObject:
   m_ObjectHideFlags: 0
@@ -44318,6 +44381,7 @@ MonoBehaviour:
   skyboxArea: {fileID: 2100000, guid: 5cf5713fdbd4dd2459f82d25cce4ad36, type: 2}
   CurrentArea: {fileID: 2292216474776207978}
   NextArea: {fileID: 1628491724}
+  locationTexts: {fileID: 0}
 --- !u!1 &2292216474124822763
 GameObject:
   m_ObjectHideFlags: 0
