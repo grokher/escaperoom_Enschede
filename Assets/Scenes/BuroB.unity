@@ -49895,7 +49895,7 @@ MonoBehaviour:
   clicked: 0
   onderwijsAnim: {fileID: 3863691992900665296}
   wetAnim: {fileID: 3863691992976893295}
-  AmbtenarenAnim: {fileID: 3863691992976893295}
+  AmbtenarenAnim: {fileID: 3863691992651804771}
   SamenwerkenAnim: {fileID: 3863691993479653743}
   huisVestingAnim: {fileID: 3863691994354562676}
   bedrijfAnim: {fileID: 3863691993995570484}
@@ -52901,6 +52901,7 @@ GameObject:
   - component: {fileID: 3863691994454794943}
   - component: {fileID: 3863691994454794936}
   - component: {fileID: 3863691994454794937}
+  - component: {fileID: 3863691994454794941}
   m_Layer: 5
   m_Name: Fade
   m_TagString: Untagged
@@ -52908,6 +52909,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &3863691994454794941
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3863691994454794940}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c080d3f111771b46891b754442ebb12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &3863691994454794943
 RectTransform:
   m_ObjectHideFlags: 0
