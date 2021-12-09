@@ -9,6 +9,7 @@ public class InspectScript : MonoBehaviour
     public GameObject key;
     public GameObject inspectTool;
     public GameObject journalButton;
+    public GameObject tutorialText2;
 
     public Transform inspectCamera;
 
@@ -19,6 +20,7 @@ public class InspectScript : MonoBehaviour
         mainCamera.GetComponent<MouseSelect>().enabled = false;
         tutorialRoomText.SetActive(false);
         tutorialRoomArrow.SetActive(false);
+        tutorialText2.SetActive(false);
     }
 
     void Update()
