@@ -15,6 +15,7 @@ public class MouseSelect : MonoBehaviour
     public bool isClicked;
     public bool inPuzzle = false;
     public bool isLerping = false;
+    public bool isAnimating = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class MouseSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         if (!isLerping)
         {
             if (Input.GetMouseButtonDown(0))
@@ -44,7 +46,7 @@ public class MouseSelect : MonoBehaviour
                 Debug.Log(activated);
                 isClicked = true;
             }
-            if (isClicked == true && !inPuzzle)
+            if (isClicked == true && !inPuzzle&&!isAnimating)
             {
                 if (!invert)
                 {
@@ -64,6 +66,7 @@ public class MouseSelect : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
                 isClicked = false;
         }
+  
     }
 }
 
