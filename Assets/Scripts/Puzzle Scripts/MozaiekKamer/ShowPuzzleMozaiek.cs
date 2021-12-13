@@ -6,6 +6,7 @@ public class ShowPuzzleMozaiek : MonoBehaviour
 {
     [SerializeField] private Camera camera;
     public GameObject puzzle;
+    public GameObject puzzleLeaveButton;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,6 +19,7 @@ public class ShowPuzzleMozaiek : MonoBehaviour
         if (camera.GetComponent<MouseSelect>().activated && camera.GetComponent<MouseSelect>().raycastHit.name == gameObject.name&&Input.GetMouseButtonDown(0))
         {
             puzzle.SetActive(true);
+            puzzleLeaveButton.SetActive(true);
             gameObject.SetActive(false);
         }
     }

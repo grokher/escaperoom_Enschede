@@ -10,6 +10,7 @@ public class SlidingGame : MonoBehaviour
     public GameObject NewCameraObject;
     public GameObject MozaiekUI;
     public GameObject MozaiekPanel;
+    public GameObject exitButton;
     [SerializeField] private TileScript[] tiles;
     private int emptySpaceIndex;
     public bool hasShuffled;
@@ -86,6 +87,7 @@ public class SlidingGame : MonoBehaviour
             emptySpace.GetComponent<SpriteRenderer>().enabled = true;
             player.SetActive(true);
             MozaiekPanel.SetActive(false);
+            exitButton.SetActive(false);
         }
     }
     public void Shuffle()
