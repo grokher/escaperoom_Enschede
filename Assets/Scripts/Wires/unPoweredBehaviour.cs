@@ -31,7 +31,7 @@ public class unPoweredBehaviour : MonoBehaviour
                 Debug.Log("yo mamma");
                 poweredWireS.connected = true;
                 unpoweredWireS.connected = true;
-                poweredWireS.connectedPosition = transform.position;
+                poweredWireS.connectedPosition = this.transform.position;
                 handler.counter++;
            
 

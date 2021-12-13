@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectHighlight : MonoBehaviour
 {
-    private Color tempColour = Color.yellow;
+    private UnityEngine.Color tempColour = UnityEngine.Color.yellow;
     public GameObject interactObject;
     
 

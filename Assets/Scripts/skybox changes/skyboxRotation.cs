@@ -10,6 +10,7 @@ public class skyboxRotation : MonoBehaviour
     public GameObject CurrentArea;
     public GameObject NextArea;
     public TextMeshProUGUI locationTexts;
+    public GameObject bookText;
     public void NextAreaOnClick()
     {
         Debug.Log("Change F Area");
@@ -17,5 +18,6 @@ public class skyboxRotation : MonoBehaviour
         CurrentArea.SetActive(false);
         NextArea.SetActive(true);
         locationTexts.text = NextArea.name;
+        bookText.SetActive(false);
     }
 }

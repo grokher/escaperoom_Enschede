@@ -22,7 +22,7 @@ public class Fade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Color curColor = this.image.color;
+        UnityEngine.Color curColor = this.image.color;
         float alphaDiff = Mathf.Abs(curColor.a - this.targetAlpha);
         if (alphaDiff > 0.0001f)
         {

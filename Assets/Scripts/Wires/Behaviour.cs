@@ -19,7 +19,7 @@ public class Behaviour : MonoBehaviour
     void Update()
     {
         MoveWire();
-        line.SetPosition(2, new Vector3(transform.localPosition.x - .1f, transform.localPosition.y - .1f, transform.localPosition.z));
+        line.SetPosition(3, new Vector3(transform.localPosition.x - .1f, transform.localPosition.y - .1f, transform.localPosition.z));
        // line.SetPosition(1, new Vector3(transform.position.x - .4f, transform.position.y - .4f, transform.position.z));
         if (!mouse.activated)
         {
@@ -48,7 +48,7 @@ public class Behaviour : MonoBehaviour
             float mouseX = Input.mousePosition.x;
             float mouseY = Input.mousePosition.y;
 
-            transform.position = GameCam.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 20));
+            transform.position = GameCam.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 7));
         }
         else
             powerWireStats.moving = false;

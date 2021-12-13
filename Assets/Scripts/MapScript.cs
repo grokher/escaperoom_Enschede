@@ -9,13 +9,13 @@ public class MapScript : MonoBehaviour
 
     public void floorButtonMain0()
     {
-        firstFloor.GetComponent<Image>().color = new Color(1, 1, 1, 0.2f);
-        mainFloor.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        firstFloor.GetComponent<Image>().color = new UnityEngine.Color(1, 1, 1, 0.2f);
+        mainFloor.GetComponent<Image>().color = new UnityEngine.Color(1, 1, 1, 1);
     }
 
     public void floorButton1()
     {
-        mainFloor.GetComponent<Image>().color = new Color(1, 1, 1, 0.2f);
-        firstFloor.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        mainFloor.GetComponent<Image>().color = new UnityEngine.Color(1, 1, 1, 0.2f);
+        firstFloor.GetComponent<Image>().color = new UnityEngine.Color(1, 1, 1, 1);
     }
 }

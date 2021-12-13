@@ -16,7 +16,7 @@ public class skyboxColourChanger : MonoBehaviour
     void Awake()
     {
         Camera = GameObject.FindGameObjectWithTag("MainCamera");
-        currentSkybox.SetColor("_Tint", new Color(128f, 128f, 128f, 1.0f));
+        currentSkybox.SetColor("_Tint", new UnityEngine.Color(128f, 128f, 128f, 1.0f));
         RSlider.value = Random.Range(0.05f, 0.5f); GSlider.value = Random.Range(0.05f, 0.5f); BSlider.value = Random.Range(0.05f, 0.5f);
         AlterSkyBox();
     }
@@ -27,12 +27,12 @@ public class skyboxColourChanger : MonoBehaviour
     }
     private void OnDisable()
     {
-        currentSkybox.SetColor("_Tint", new Color(128f / 255f, 128f / 255f, 128f / 255f, 1.0f));
+        currentSkybox.SetColor("_Tint", new UnityEngine.Color(128f / 255f, 128f / 255f, 128f / 255f, 1.0f));
         RenderSettings.skybox = currentSkybox;
     }
     void AlterSkyBox()
     {
-        currentSkybox.SetColor("_Tint",new Color(RSlider.value * 1.5f, GSlider.value * 0.8f, BSlider.value * 0.5f,1.0f));
+        currentSkybox.SetColor("_Tint",new UnityEngine.Color(RSlider.value * 1.5f, GSlider.value * 0.8f, BSlider.value * 0.5f,1.0f));
         RenderSettings.skybox = currentSkybox;
         
     }

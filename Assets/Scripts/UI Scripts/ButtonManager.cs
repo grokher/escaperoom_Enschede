@@ -75,14 +75,14 @@ public class ButtonManager : MonoBehaviour
     }
     public void DraaischijfpuzzleRightAnswer()
     {
-        linkedText.color = new Color(0f, 90f, 0f);
+        linkedText.color = new UnityEngine.Color(0f, 90f, 0f);
         linkedText.text = "Juiste antwoord is gegeven!";
         linkedText.gameObject.SetActive(true);
         gameObject.SetActive(false);
     }
     public void DraaischijfpuzzleWrongAnswer()
     {
-        linkedText.color = new Color(90f, 0f, 0f);
+        linkedText.color = new UnityEngine.Color(90f, 0f, 0f);
         linkedText.text = "Jammer, je hebt het fout!";
         linkedText.gameObject.SetActive(true);
     }
