@@ -13,7 +13,7 @@ public class TutorialScript : MonoBehaviour
     public TextMesh tutorialsText;
     public TextMeshProUGUI pickupText;
     public bool Key;
-    public bool pickingupText;
+    private bool pickingupText;
 
     private void Update()
     {
@@ -26,6 +26,8 @@ public class TutorialScript : MonoBehaviour
         if (itemPickup.GetComponent<pickupableItems>().hasThisItem)
         {
             tutorialsText.text = "je hebt de sleutel gevonden \n maak nu de deur open"; // \n = newline \t = tab \b = backspace
+            Debug.Log("did the text");
+            tutorialsText.text = "je hebt de sleutel gevonden \n maak nu de deur open";
             Key = true;
             if(Key == true && !pickingupText)
             {

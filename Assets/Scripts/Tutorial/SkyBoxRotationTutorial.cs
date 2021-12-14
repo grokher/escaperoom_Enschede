@@ -20,6 +20,7 @@ public class SkyBoxRotationTutorial : MonoBehaviour
         else if(mainCamera.GetComponent<MouseSelect>().activated && mainCamera.GetComponent<MouseSelect>().raycastHit.name == gameObject.name && !itemObject.GetComponent<pickupableItems>().hasThisItem)
         {
             tutorialsText.text = "Oh wacht eens even je moet \n eerst de sleutel vinden";
+            Debug.Log("Back to this text");
             helpText.SetActive(true);
             bookText.SetActive(true);
         }

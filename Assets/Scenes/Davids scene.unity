@@ -866,7 +866,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030402182}
-  m_Text: "klik op het boek om \nhet te inspecteren"
+  m_Text: "klik op het boek om \nhet te bekijken"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -11908,6 +11908,7 @@ MonoBehaviour:
   NewCameraObject: {fileID: 4077639483771502229}
   MozaiekUI: {fileID: 0}
   MozaiekPanel: {fileID: 1506277217823168925}
+  exitButton: {fileID: 0}
   tiles:
   - {fileID: 7398356202976618337}
   - {fileID: 7398356202653403293}
@@ -18602,6 +18603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
   puzzle: {fileID: 1506277217823168925}
+  puzzleLeaveButton: {fileID: 0}
 --- !u!225 &4077639483702831282
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -29799,6 +29801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
   puzzle: {fileID: 1506277217823168925}
+  puzzleLeaveButton: {fileID: 0}
 --- !u!114 &4077639485138063702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50203,7 +50206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_Pivot.y
@@ -50215,7 +50218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -50223,7 +50226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_AnchorMin.y
@@ -50231,7 +50234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 297.9
+      value: 297.90002
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_SizeDelta.y
@@ -50267,7 +50270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -300.05
       objectReference: {fileID: 0}
     - target: {fileID: 8125381501096237231, guid: d7d7b379110c79b448544624f54526e5, type: 3}
       propertyPath: m_AnchoredPosition.y
