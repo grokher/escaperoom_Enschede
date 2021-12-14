@@ -7,11 +7,12 @@ public class Behaviour : MonoBehaviour
     public statestiek powerWireStats;
     public GameMouseSelect mouse;
     public Camera GameCam;
+    public GameObject lineObject;
     LineRenderer line;
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<statestiek>();
+        GetComponent<statestiek>();
         line = GetComponentInParent<LineRenderer>();
     }
 
@@ -19,7 +20,7 @@ public class Behaviour : MonoBehaviour
     void Update()
     {
         MoveWire();
-        line.SetPosition(3, new Vector3(transform.localPosition.x - .1f, transform.localPosition.y - .1f, transform.localPosition.z));
+        line.SetPosition(3, lineObject.transform.position);
        // line.SetPosition(1, new Vector3(transform.position.x - .4f, transform.position.y - .4f, transform.position.z));
         if (!mouse.activated)
         {
@@ -31,7 +32,6 @@ public class Behaviour : MonoBehaviour
     }
     void OnMouseOver()
     {
-        
         powerWireStats.movable = true;
     }
     void OnMouseExit()
@@ -42,7 +42,7 @@ public class Behaviour : MonoBehaviour
     }
     void MoveWire()
     {
-        if (mouse.activated && powerWireStats.movable&&powerWireStats.connected == false)
+        if (mouse.activated && mouse.hitObject == gameObject && powerWireStats.movable&&powerWireStats.connected == false)
         {
             powerWireStats.moving = true;
             float mouseX = Input.mousePosition.x;
