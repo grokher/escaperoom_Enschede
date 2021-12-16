@@ -17,6 +17,9 @@ public class raamScript : MonoBehaviour
     void Update()
     {
         if (mouse.activated && mouse.hitObject == gameObject)
-            win.winCounter++;
+        {
+
+        }
+           // win.winCounter++;
     }
 }

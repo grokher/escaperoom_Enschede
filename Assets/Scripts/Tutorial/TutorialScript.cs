@@ -10,10 +10,12 @@ public class TutorialScript : MonoBehaviour
     public GameObject itemPickup;
     public GameObject bookPickup;
     public GameObject inspectTool;
+    public GameObject journalCanvas;
     public TextMesh tutorialsText;
     public TextMeshProUGUI pickupText;
     public bool Key;
     private bool pickingupText;
+    bool boolean = false;
 
     private void Update()
     {
@@ -31,10 +33,14 @@ public class TutorialScript : MonoBehaviour
             Key = true;
             if(Key == true && !pickingupText)
             {
-                pickupText.text = "Je hebt een logboek ontvangen";
-                yield return new WaitForSeconds(3f);
-                pickupText.text = "";
-                pickingupText = true;
+                journalCanvas.SetActive(true);
+                if (boolean)
+                {
+                    pickupText.text = "Je hebt een logboek ontvangen";
+                    yield return new WaitForSeconds(3f);
+                    pickupText.text = "";
+                    pickingupText = true;
+                }
             }
         }
         yield return new WaitForSeconds(2f); 
