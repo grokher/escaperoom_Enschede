@@ -35,7 +35,7 @@ public class burgerzaalAnimHandler : MonoBehaviour
     public GameObject animCam;
     public GameObject mainCam;
     [Header("win condition = 7")]
-    public int winCounter = 0;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +63,7 @@ public class burgerzaalAnimHandler : MonoBehaviour
             animCam.SetActive(false);
             mainCam.SetActive(true);
         }
-        if (winCounter == 7)
+     //   if (winCounter == 7)
         {
             pane1obj.SetActive(true);
             if (pane1.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane1done)
