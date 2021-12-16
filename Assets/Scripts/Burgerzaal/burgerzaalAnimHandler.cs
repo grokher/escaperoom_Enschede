@@ -5,6 +5,7 @@ using UnityEngine;
 public class burgerzaalAnimHandler : MonoBehaviour
 {
     private MouseSelect mouseSelect;
+    public winCondition win;
     [Header("Animators")]
     public Animator pane1;
     public Animator pane2;
@@ -63,7 +64,7 @@ public class burgerzaalAnimHandler : MonoBehaviour
             animCam.SetActive(false);
             mainCam.SetActive(true);
         }
-     //   if (winCounter == 7)
+        if (win.winCounter == 7)
         {
             pane1obj.SetActive(true);
             if (pane1.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane1done)
