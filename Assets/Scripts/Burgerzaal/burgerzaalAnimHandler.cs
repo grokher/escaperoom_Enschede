@@ -54,8 +54,6 @@ public class burgerzaalAnimHandler : MonoBehaviour
     {
         if (!introDone)
         {
-            animCam.SetActive(true);
-            mainCam.SetActive(false);
             cameraAnim.Play("IntroAnim");
             introDone = true;
         }
