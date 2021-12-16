@@ -34,7 +34,7 @@ public class burgerzaalAnimHandler : MonoBehaviour
     [Header("Camera")]
     public GameObject animCam;
     public GameObject mainCam;
-    [Header("win condition = 7")]
+ 
    
     // Start is called before the first frame update
     void Start()
