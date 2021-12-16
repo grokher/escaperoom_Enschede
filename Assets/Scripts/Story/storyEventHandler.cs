@@ -41,7 +41,7 @@ public class storyEventHandler : MonoBehaviour
             text.SetActive(false);
             textDone = true;
             m_rawImage.texture = bode1;
-            Timer = 1.75f;
+            Timer = 3.1f;
 
         }
 
@@ -49,25 +49,25 @@ public class storyEventHandler : MonoBehaviour
         {
             bode1Done = true;
             m_rawImage.texture = bode2;
-            Timer = 1.70f;
+            Timer = 2.9f;
         }
         if (Timer <= 0 && !bode2Done)
         {
             bode2Done = true;
             m_rawImage.texture = bode3;
-            Timer = 1.67f;
+            Timer = 2.8f;
         }
         if (Timer <= 0 && !bode3Done)
         {
             bode3Done = true;
             m_rawImage.texture = bode4;
-            Timer = 1.67f;
+            Timer = 2.8f;
         }
         if (Timer <= 0 && !bode4Done)
         {
             bode4Done = true;
             m_rawImage.texture = bode5;
-            Timer = 1.65f;
+            Timer = 2.8f;
         }
         if(Timer <= 0 && !bode5Done)
         {
