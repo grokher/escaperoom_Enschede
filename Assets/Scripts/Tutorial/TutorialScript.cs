@@ -34,7 +34,7 @@ public class TutorialScript : MonoBehaviour
             if(Key == true && !pickingupText)
             {
                 journalCanvas.SetActive(true);
-                if (boolean)
+                if (boolean && !journalCanvas)
                 {
                     pickupText.text = "Je hebt een logboek ontvangen";
                     yield return new WaitForSeconds(3f);

@@ -20,4 +20,9 @@ public class skyboxRotation : MonoBehaviour
         locationTexts.text = NextArea.name;
         bookText.SetActive(false);
     }
+
+    public void Update()
+    {
+        
+    }
 }
