@@ -10,6 +10,7 @@ public class MouseSelect : MonoBehaviour
     [SerializeField, Range(1, 99)] private float maxXAngle = 85f;
     public Transform raycastHit;
     public GameObject hitObject;
+    public GameObject TPmachine;
     private Camera gameCamera;
     public bool activated;
     public bool isClicked;
@@ -40,6 +41,15 @@ public class MouseSelect : MonoBehaviour
                     hitObject = hit.transform.gameObject;
                     activated = true;
                     Debug.Log("hit!");
+                    if (TPmachine.CompareTag("TypeMachine") && hit.transform.gameObject)
+                    {
+                        //roll credits Artists: Vera Hiemstra, Thijn Wolf
+                        //Developers: Max Abbink, Laurens van Eijk, David Cigri
+                        //Animators: Max Abbink
+                        //UI/UX Developer: David Cigri
+                        //Project Manager: Wouter van Kooten
+                        //3d model: Vincent Poorthuis
+                    }
                 }
                 else
                     activated = false;
