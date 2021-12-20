@@ -7,6 +7,7 @@ TagManager:
   - Pipe
   - Panel
   - DragableText
+  - GameCamera
   layers:
   - Default
   - TransparentFX
