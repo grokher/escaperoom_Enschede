@@ -13,7 +13,7 @@ public class skyboxRotationLock : MonoBehaviour
     {
         if (torenKey.GetComponent<pickupableItems>().hasThisItem)
         {
-            mozaiekArrow.GetComponent<skyboxRotation>().enabled = true;
+            mozaiekArrow.GetComponent<OnRaycastHit>().enabled = true;
         }
     }
 }

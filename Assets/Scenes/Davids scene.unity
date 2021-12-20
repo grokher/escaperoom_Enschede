@@ -6429,7 +6429,8 @@ MonoBehaviour:
   wethouderInfo: {fileID: 4077639485263012999}
   Win: {fileID: 939063076178944404}
   cam: {fileID: 0}
-  counters: {fileID: 0}
+  themeObject: {fileID: 0}
+  themaText: {fileID: 0}
   clicked: 0
   onderwijsAnim: {fileID: 939063075718429310}
   wetAnim: {fileID: 939063075642024129}
@@ -6452,6 +6453,7 @@ MonoBehaviour:
   message: {fileID: 939063076178944404}
   Text: {fileID: 939063074407896148}
   winText: {fileID: 0}
+  Feedback: {fileID: 0}
   panelCounter: 0
   winCounter: 0
 --- !u!4 &939063074341261679
