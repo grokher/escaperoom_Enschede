@@ -28,6 +28,7 @@ public class Painting : MonoBehaviour
     public GameObject Win;
     public GameObject cam;
     protected GameObject lookObject;
+    public GameObject counters;
     public bool clicked;
     private Animator animController;
     public Animator onderwijsAnim;
@@ -131,8 +132,10 @@ public class Painting : MonoBehaviour
         {
             animController.SetBool("hasClicked", false);
         }
-    
- 
+
+        if (Info)
+            counters.SetActive(false);
+  
    }
     public void wetStart()
     {
@@ -142,6 +145,7 @@ public class Painting : MonoBehaviour
         thisWorld.SetActive(false);
         wetInfo.SetActive(false);
         cam.GetComponent<MouseSelect>().isAnimating = false;
+        counters.SetActive(true);
     }
     public void OnderwijsStart()
     {
@@ -151,6 +155,7 @@ public class Painting : MonoBehaviour
         thisWorld.SetActive(false);
         onderwijsInfo.SetActive(false);
         cam.GetComponent<MouseSelect>().isAnimating = false;
+        counters.SetActive(true);
     }
     public void samenwerkenStart()
     {
@@ -160,6 +165,7 @@ public class Painting : MonoBehaviour
         thisWorld.SetActive(false);
         samenwerkenInfo.SetActive(false);
         cam.GetComponent<MouseSelect>().isAnimating = false;
+        counters.SetActive(true);
     }
     public void bedrijfStart()
     {
@@ -169,6 +175,7 @@ public class Painting : MonoBehaviour
         thisWorld.SetActive(false);
         bedrijfInfo.SetActive(false);
         cam.GetComponent<MouseSelect>().isAnimating = false;
+        counters.SetActive(true);
     }
     public void huisvestingStart()
     {
@@ -178,6 +185,7 @@ public class Painting : MonoBehaviour
         thisWorld.SetActive(false);
         huisvesting.SetActive(false);
         cam.GetComponent<MouseSelect>().isAnimating = false;
+        counters.SetActive(true);
     }
     public void wethouderStart()
     {
@@ -187,6 +195,7 @@ public class Painting : MonoBehaviour
         thisWorld.SetActive(false);
         wethouderInfo.SetActive(false);
         cam.GetComponent<MouseSelect>().isAnimating = false;
+        counters.SetActive(true);
     }
     public void back()
     {
