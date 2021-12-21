@@ -30,6 +30,7 @@ public class Painting : MonoBehaviour
     public GameObject cam;
     protected GameObject lookObject;
     public GameObject themeObject;
+    protected ZDVCounter counter;
     public Text themaText;
     public bool clicked;
     private Animator animController;
@@ -42,6 +43,7 @@ public class Painting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        counter = GetComponent<ZDVCounter>();
         themeObject.SetActive(false);
         cam = Camera.main.gameObject;
         wetInfo.SetActive(false);
@@ -74,6 +76,7 @@ public class Painting : MonoBehaviour
             cam.GetComponent<MouseSelect>().isAnimating = true;
             lookObject = Camera.main.GetComponent<MouseSelect>().raycastHit.gameObject;
             themaText.text = cam.GetComponent<MouseSelect>().raycastHit.gameObject.name.ToString();
+            counter.isInTheme = true;
         }
         else if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == bedrijfWorldPainting.name && clicked == false)
         {
@@ -84,6 +87,7 @@ public class Painting : MonoBehaviour
             cam.GetComponent<MouseSelect>().isAnimating = true;
             lookObject = Camera.main.GetComponent<MouseSelect>().raycastHit.gameObject;
             themaText.text = cam.GetComponent<MouseSelect>().raycastHit.gameObject.name.ToString();
+            counter.isInTheme = true;
         }
         else if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == onderWijsWorldPainting.name && clicked == false)
         {
@@ -94,6 +98,7 @@ public class Painting : MonoBehaviour
             cam.GetComponent<MouseSelect>().isAnimating = true;
             lookObject = Camera.main.GetComponent<MouseSelect>().raycastHit.gameObject;
             themaText.text = cam.GetComponent<MouseSelect>().raycastHit.gameObject.name.ToString();
+            counter.isInTheme = true;
 
         }
         else if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == sameWerkingWorldPainting.name && clicked == false)
@@ -105,6 +110,7 @@ public class Painting : MonoBehaviour
             cam.GetComponent<MouseSelect>().isAnimating = true;
             lookObject = Camera.main.GetComponent<MouseSelect>().raycastHit.gameObject;
             themaText.text = cam.GetComponent<MouseSelect>().raycastHit.gameObject.name.ToString();
+            counter.isInTheme = true;
         }
         else if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == wethouderWorldPainting.name && clicked == false)
         {
@@ -115,6 +121,7 @@ public class Painting : MonoBehaviour
             cam.GetComponent<MouseSelect>().isAnimating = true;
             lookObject = Camera.main.GetComponent<MouseSelect>().raycastHit.gameObject;
             themaText.text = cam.GetComponent<MouseSelect>().raycastHit.gameObject.name.ToString();
+            counter.isInTheme = true;
 
         }
         else if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == justitieWorldPainting.name && clicked == false)
@@ -126,6 +133,7 @@ public class Painting : MonoBehaviour
             lookObject = Camera.main.GetComponent<MouseSelect>().raycastHit.gameObject;
             cam.GetComponent<MouseSelect>().isAnimating = true;
             themaText.text = cam.GetComponent<MouseSelect>().raycastHit.gameObject.name.ToString();
+            counter.isInTheme = true;
         }
         else if (lookObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Rotate"))
         {
@@ -202,6 +210,7 @@ public class Painting : MonoBehaviour
     }
     public void back()
     {
+        counter.isInTheme = false;
         themeObject.SetActive(false);
         clicked = false;
         animController.SetBool("hasClicked", true);
