@@ -75,4 +75,9 @@ public class storyEventHandler : MonoBehaviour
             SceneManager.LoadScene(3);
         }
     }
+
+    public void SkipButton()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
