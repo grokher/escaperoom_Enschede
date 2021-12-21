@@ -10,6 +10,7 @@ public class ZDVCounter : MonoBehaviour
     public GameObject Text;
     public GameObject winText;
     public GameObject Feedback;
+    public GameObject raam;
     public int panelCounter = 0;
     private int prevPanelCounter;
     public int winCounter = 0;
@@ -47,7 +48,9 @@ public class ZDVCounter : MonoBehaviour
             prevPanelCounter = panelCounter;
         if (Timer <= 0)
             Feedback.SetActive(false);
- 
+
+        if (winCounter >= 6)
+            raam.SetActive(true);
        
     }
 }
