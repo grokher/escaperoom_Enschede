@@ -15,6 +15,7 @@ public class VideoHandler : MonoBehaviour
         Camera = GameObject.FindGameObjectWithTag("MainCamera");
         Camera.AddComponent<VideoPlayer>();
         videoPlayer = Camera.GetComponent<VideoPlayer>();
+        Camera.GetComponent<MouseSelect>().enabled = false;
         if (videoPlayer.clip == null)
         {
             videoPlayer.clip = videoClip;
@@ -33,5 +34,6 @@ public class VideoHandler : MonoBehaviour
     void EndReached(VideoPlayer vp)
     {
         vp.enabled = false;
+        Camera.GetComponent<MouseSelect>().enabled = true;
     }
 }
