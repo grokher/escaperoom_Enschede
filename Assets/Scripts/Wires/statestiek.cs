@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //public enum Color { blue, red, yellow, green };
- public enum Color { blue, red, yellow, green};
+ public enum Color { blue, red, yellow, green, pink, cyan, orange, DarkGreen};
 public class statestiek : MonoBehaviour
 {
     public bool movable = false;

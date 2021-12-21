@@ -28,12 +28,14 @@ public class unPoweredBehaviour : MonoBehaviour
             statestiek poweredWireS = other.GetComponent<statestiek>();
             if (poweredWireS.objectColor == unpoweredWireS.objectColor)
             {
-                Debug.Log("yo mamma");
+              
                 poweredWireS.connected = true;
                 unpoweredWireS.connected = true;
                 poweredWireS.connectedPosition = this.transform.position;
-                handler.counter++;
-           
+                handler.counter1++;
+                handler.counter2++;
+                handler.counter3++;
+
 
             }
         }   
