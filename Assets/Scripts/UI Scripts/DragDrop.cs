@@ -13,12 +13,15 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public bool inCorrectSlot = false;
     private CanvasGroup canvasGroup;
     public GameObject cypherpuzzle;
+    public GameObject raam;
     private void Awake()
     {
         inSlot = false;
         rectTransform = GetComponent<RectTransform>();
         originalrectTransform = rectTransform.anchoredPosition;
         canvasGroup = GetComponent<CanvasGroup>();
+        raam = GameObject.Find("raam");
+        raam.SetActive(false);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -57,6 +60,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     {
         //winText.color = new Color(0,90,0);
         //winText.text = "Correct, je hebt het goed!";
+        raam.SetActive(true);
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseSelect>().inPuzzle = false;
         cypherpuzzle.SetActive(false);
     }
