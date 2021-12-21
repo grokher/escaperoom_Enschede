@@ -66,7 +66,8 @@ public class Painting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (counter.panelCounter == 3)
+            themeObject.SetActive(false);
         if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == huisVestingWorldPainting.name && clicked == false)
         {
             Info.SetActive(false);
