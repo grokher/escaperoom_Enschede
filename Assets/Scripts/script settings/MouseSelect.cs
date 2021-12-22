@@ -75,6 +75,7 @@ public class MouseSelect : MonoBehaviour
             }
             if (Input.GetMouseButtonUp(0))
                 isClicked = false;
+            hitObject = null;
         }
   
     }

@@ -193,6 +193,7 @@ public class Painting : MonoBehaviour
     }
     public void huisvestingStart()
     {
+        
         animController.SetBool("hasClicked", true);
         huisVestingAnim.SetBool("huisvestingBool", false);
         huisVestingWorld.SetActive(true);
