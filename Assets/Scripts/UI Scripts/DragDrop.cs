@@ -20,8 +20,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rectTransform = GetComponent<RectTransform>();
         originalrectTransform = rectTransform.anchoredPosition;
         canvasGroup = GetComponent<CanvasGroup>();
-        raam = GameObject.Find("raam");
-        raam.SetActive(false);
+        //raam = GameObject.Find("raam");
+        
     }
 
     public void OnBeginDrag(PointerEventData eventData)
