@@ -7,13 +7,15 @@ public class skyboxRotation : MonoBehaviour
 {
     //raycast hit -> moves next specific area
     public Material skyboxArea;
-    public GameObject mozaiekArrow;
+    
     public GameObject CurrentArea;
     public GameObject NextArea;
     public TextMeshProUGUI locationTexts;
-    public TextMeshProUGUI lockedPickupText;
     public GameObject bookText;
     private bool stopText;
+    [Header("lockedDoorPart")]
+    public GameObject mozaiekArrow;
+    public TextMeshProUGUI lockedPickupText;
     public void NextAreaOnClick()
     {
         Debug.Log("Change F Area");
