@@ -22,7 +22,7 @@ public class Behaviour : MonoBehaviour
         MoveWire();
         line.SetPosition(3, lineObject.transform.position);
        // line.SetPosition(1, new Vector3(transform.position.x - .4f, transform.position.y - .4f, transform.position.z));
-        if (!mouse.activated)
+        if (mouse.hitObject == null)
         {
             if(!powerWireStats.connected)
             gameObject.transform.position = powerWireStats.startPosition;

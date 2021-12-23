@@ -31,7 +31,9 @@ public class GameMouseSelect : MonoBehaviour
                     Debug.Log("hit!");
                 }
                 else
-                    activated = false;
+                    hitObject = null;
+                
+                    
                 Debug.Log(activated);
             }
         }
