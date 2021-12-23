@@ -3983,9 +3983,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5892735599714839359, guid: 98bf41fe115ee3540baebcb9c5bd8a7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 409b736095b07e04e9553a119f27479b, type: 2}
+    - target: {fileID: 5892735600364330006, guid: 98bf41fe115ee3540baebcb9c5bd8a7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 088a341ba7e3f454d9982231a0fb78df, type: 2}
+    - target: {fileID: 5892735600906362751, guid: 98bf41fe115ee3540baebcb9c5bd8a7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 409b736095b07e04e9553a119f27479b, type: 2}
     - target: {fileID: 5892735601171394956, guid: 98bf41fe115ee3540baebcb9c5bd8a7d, type: 3}
       propertyPath: m_Name
       value: 3D PipesPuzzle 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892735601171394956, guid: 98bf41fe115ee3540baebcb9c5bd8a7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5892735601171394957, guid: 98bf41fe115ee3540baebcb9c5bd8a7d, type: 3}
       propertyPath: m_RootOrder
@@ -5791,10 +5807,12 @@ MonoBehaviour:
   maxXAngle: 85
   raycastHit: {fileID: 0}
   hitObject: {fileID: 0}
+  TPmachine: {fileID: 0}
   activated: 0
   isClicked: 0
   inPuzzle: 0
   isLerping: 0
+  isAnimating: 0
 --- !u!82 &2100515939
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6518,6 +6536,10 @@ PrefabInstance:
     - target: {fileID: 5905122281159987279, guid: 71696e0a3421c4a4d914e5529c775dfd, type: 3}
       propertyPath: m_Name
       value: burocratious puzzel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905122281159987279, guid: 71696e0a3421c4a4d914e5529c775dfd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5905122281203303952, guid: 71696e0a3421c4a4d914e5529c775dfd, type: 3}
       propertyPath: Camera

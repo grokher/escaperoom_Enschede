@@ -5,6 +5,11 @@ using TMPro;
 
 public class raamScript : MonoBehaviour
 {
+    [Header("skybox change win")]
+    public Material skyboxArea;
+    public GameObject CurrentArea;
+    public GameObject NextArea;
+
     public MouseSelect mouse;
     //public winCondition win;
     public GameObject raam, raam1, raam2, raam3, raam4, raam5, raam6;
@@ -85,8 +90,9 @@ public class raamScript : MonoBehaviour
 
         if (raamCount >= 7)
         {
-            //win screen
-            //fade naar burgerzaal
+            RenderSettings.skybox = skyboxArea;
+            CurrentArea.SetActive(false);
+            NextArea.SetActive(true);
         }
     }
 }

@@ -32,10 +32,12 @@ public class PipeGameHandler3D : MonoBehaviour
             if (pipe.transform.localEulerAngles.y == pipe.GetComponent<PipePiece3D>().correctRotation || pipe.transform.localEulerAngles.y == 360f)
             {
                 pipeCounter++;
+                
             }
             else if (pipe.transform.localEulerAngles.y == pipe.GetComponent<PipePiece3D>().correctRotation2 && pipe.name.Contains("Straight"))
             {
                 pipeCounter++;
+
             }
 
         }
