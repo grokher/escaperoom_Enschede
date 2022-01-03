@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine;
 
 public class Painting : MonoBehaviour
@@ -19,7 +20,6 @@ public class Painting : MonoBehaviour
     public GameObject wethouderWorldPainting;
     public GameObject justitieWorldPainting;
     public GameObject thisWorld;
-    public GameObject fade;
     public GameObject onderwijsInfo;
     public GameObject wetInfo;
     public GameObject bedrijfInfo;
@@ -28,12 +28,12 @@ public class Painting : MonoBehaviour
     public GameObject wethouderInfo;
     public GameObject Win;
     public GameObject cam;
-    protected GameObject lookObject;
+    public GameObject lookObject;
     public GameObject themeObject;
+    public GameObject activeWindow;
     protected ZDVCounter counter;
-    public Text themaText;
+    public TextMeshProUGUI themaText;
     public bool clicked;
-    private Animator animController;
     public Animator onderwijsAnim;
     public Animator wetAnim;
     public Animator AmbtenarenAnim;
@@ -59,7 +59,7 @@ public class Painting : MonoBehaviour
         wethouderWorld.SetActive(false);
         justitieWorld.SetActive(false);
         thisWorld.SetActive(true);
-        animController = fade.GetComponent<Animator>();
+
         
     }
 
@@ -148,16 +148,13 @@ public class Painting : MonoBehaviour
                 cam.GetComponent<MouseSelect>().isAnimating = false;
             cam.transform.LookAt(lookObject.transform);
         }
-            if (Input.GetMouseButtonUp(0))
-        {
-            animController.SetBool("hasClicked", false);
-        }
+    
     
  
    }
     public void wetStart()
     {
-        animController.SetBool("hasClicked", true);
+        
         wetAnim.SetBool("WetBool", false);
         justitieWorld.SetActive(true);
         thisWorld.SetActive(false);
@@ -166,7 +163,7 @@ public class Painting : MonoBehaviour
     }
     public void OnderwijsStart()
     {
-        animController.SetBool("hasClicked", true);
+      
         onderwijsAnim.SetBool("onderwijsSelected", false);
         onderWijsWorld.SetActive(true);
         thisWorld.SetActive(false);
@@ -175,7 +172,7 @@ public class Painting : MonoBehaviour
     }
     public void samenwerkenStart()
     {
-        animController.SetBool("hasClicked", true);
+       
         SamenwerkenAnim.SetBool("SamenWerkenBool", false);
         samenWerkingWorld.SetActive(true);
         thisWorld.SetActive(false);
@@ -184,7 +181,7 @@ public class Painting : MonoBehaviour
     }
     public void bedrijfStart()
     {
-        animController.SetBool("hasClicked", true);
+       
         bedrijfAnim.SetBool("bedrijfBool", false);
         bedrijfWorld.SetActive(true);
         thisWorld.SetActive(false);
@@ -194,7 +191,7 @@ public class Painting : MonoBehaviour
     public void huisvestingStart()
     {
         
-        animController.SetBool("hasClicked", true);
+      
         huisVestingAnim.SetBool("huisvestingBool", false);
         huisVestingWorld.SetActive(true);
         thisWorld.SetActive(false);
@@ -203,7 +200,7 @@ public class Painting : MonoBehaviour
     }
     public void wethouderStart()
     {
-        animController.SetBool("hasClicked", true);
+     
        AmbtenarenAnim.SetBool("AmbtenarenBool", false);
         wethouderWorld.SetActive(true);
         thisWorld.SetActive(false);
@@ -215,7 +212,7 @@ public class Painting : MonoBehaviour
         counter.isInTheme = false;
         themeObject.SetActive(false);
         clicked = false;
-        animController.SetBool("hasClicked", true);
+        
         huisVestingWorld.SetActive(false);
         bedrijfWorld.SetActive(false);
         onderWijsWorld.SetActive(false);

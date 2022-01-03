@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ZDVCounter : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class ZDVCounter : MonoBehaviour
     private float Timer = 3f;
     public bool isInTheme;
     private Text counterText;
-    private Text winCounterText;
+    private TextMeshProUGUI winCounterText;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,7 @@ public class ZDVCounter : MonoBehaviour
         message.SetActive(false);
        Feedback.SetActive(false); 
         counterText = Text.GetComponent<Text>();
-        winCounterText = winText.GetComponent<Text>();
+        winCounterText = winText.GetComponent<TextMeshProUGUI>();
         prevPanelCounter = panelCounter;
     }
 
@@ -65,7 +66,7 @@ public class ZDVCounter : MonoBehaviour
                 wethouderCount = panelCounter;
             if (wetBool)
                 wetCount = panelCounter;
-
+            Debug.Log(painting.lookObject.name);
             if (panelCounter == 3)
             {
                 painting.back();

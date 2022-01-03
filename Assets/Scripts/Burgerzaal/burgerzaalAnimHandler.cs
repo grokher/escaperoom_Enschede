@@ -40,6 +40,7 @@ public class burgerzaalAnimHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cameraAnim = animCam.GetComponent<Animator>();
         pane1obj.SetActive(false);
         pane2obj.SetActive(false);
         pane3obj.SetActive(false);
