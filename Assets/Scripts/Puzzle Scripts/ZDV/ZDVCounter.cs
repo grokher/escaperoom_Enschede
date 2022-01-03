@@ -14,6 +14,7 @@ public class ZDVCounter : MonoBehaviour
     public GameObject Feedback;
     public GameObject raam;
     protected Painting painting;
+    public Collider activeWindowCollider;
     public int panelCounter = 0;
     private int huisCount = 0;
     private int bedrijfCount = 0;
@@ -66,9 +67,11 @@ public class ZDVCounter : MonoBehaviour
                 wethouderCount = panelCounter;
             if (wetBool)
                 wetCount = panelCounter;
-            Debug.Log(painting.lookObject.name);
+      
             if (panelCounter == 3)
             {
+                activeWindowCollider = painting.activeWindow.GetComponent<Collider>();
+                activeWindowCollider.enabled = !activeWindowCollider.enabled;
                 painting.back();
                 panelCounter = 0;
                 winCounter++;
@@ -99,27 +102,27 @@ public class ZDVCounter : MonoBehaviour
     public void bedrijfSelect()
     {
         bedrijfBool = true;
-        panelCounter = huisCount;
+        panelCounter = bedrijfCount;
     }
     public void onderwijsSelect()
     {
         onderwijsBool = true;
-        panelCounter = huisCount;
+        panelCounter = onderwijsCount;
     }
     public void samenwerkenSelect()
     {
         samenwerkenBool = true;
-        panelCounter = huisCount;
+        panelCounter = samenwerkenCount;
     }
     public void wethouderSelect()
     {
         WethouderBool = true;
-        panelCounter = huisCount;
+        panelCounter = wethouderCount;
     }
     public void wetSelect()
     {
         wetBool = true;
-        panelCounter = huisCount;
+        panelCounter = wetCount;
     }
     public void allBack()
     {
