@@ -16,6 +16,7 @@ public class wireHandler : MonoBehaviour
     public GameObject Mouse;
     public GameObject Box;
     public GameObject wiresObj;
+    public GameObject liftArrow;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,9 +47,10 @@ public class wireHandler : MonoBehaviour
         {
             winCounter = 3;
         }
-        if (winCounter >= 3)
+        if (winCounter == 3)
         {
             Debug.Log("WINWIRES");
+            liftArrow.SetActive(true);
             Mouse.SetActive(true);
             Box.SetActive(true);
             wiresObj.SetActive(false);
