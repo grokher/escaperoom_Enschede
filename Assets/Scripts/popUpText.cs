@@ -7,11 +7,12 @@ public class popUpText : MonoBehaviour
 {
     public TextMeshProUGUI popupText;
     public GameObject itemPickup;
-    bool textShown1;
+    bool textShown1, textShown2;
 
     private void Update()
     {
         StartCoroutine(TutorialText());
+        StartCoroutine(RaamText());
     }
 
     IEnumerator TutorialText()
@@ -22,6 +23,16 @@ public class popUpText : MonoBehaviour
             yield return new WaitForSeconds(2.5f);
             popupText.text = "";
             textShown1 = true;
+        }
+    }
+
+    IEnumerator RaamText()
+    {
+        if (itemPickup.GetComponent<pickupableItems>().hasThisItem && !textShown2 && gameObject.CompareTag("Raam"))
+        {
+            popupText.text = "je hebt een raam ontvangen";
+            yield return new WaitForSeconds(2.5f);
+            popupText.text = "";
         }
     }
 }

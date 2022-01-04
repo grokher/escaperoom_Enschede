@@ -164,8 +164,6 @@ public class HintSysteem : MonoBehaviour
 
     public void TurnOffNotifications()
     {
-        
             newBookNotification.SetActive(false);
-        
     }
 }
