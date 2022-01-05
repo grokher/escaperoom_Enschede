@@ -72,6 +72,7 @@ public class ZDVCounter : MonoBehaviour
             {
                 activeWindowCollider = painting.activeWindow.GetComponent<Collider>();
                 activeWindowCollider.enabled = !activeWindowCollider.enabled;
+                activeWindowCollider.GetComponent<Animator>().Play("RotateInf");
                 painting.back();
                 panelCounter = 0;
                 winCounter++;
