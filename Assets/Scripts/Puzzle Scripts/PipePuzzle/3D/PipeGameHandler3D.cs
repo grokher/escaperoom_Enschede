@@ -8,7 +8,7 @@ public class PipeGameHandler3D : MonoBehaviour
     GameObject[] Pipes;
     public GameObject MainCamera;
     public GameObject BlockedArrow;
-    public GameObject SteamEmitter;
+    public GameObject SteamEmitter, SteamEmitter1;
     int pipeCounter;
     public bool pipeGameWon;
     #endregion
@@ -50,6 +50,7 @@ public class PipeGameHandler3D : MonoBehaviour
             MainCamera.GetComponent<MouseSelect>().inPuzzle = true;
             BlockedArrow.SetActive(true);
             SteamEmitter.SetActive(false);
+            SteamEmitter1.SetActive(false);
             // GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseSelect>().inPuzzle = false;
             // GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().enabled = true;
             gameObject.SetActive(false);

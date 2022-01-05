@@ -13,12 +13,13 @@ public class UnlockedArrow : MonoBehaviour
 
     private void Update()
     {
-        if (select.hitObject = unlockingArrow)
+        if (select.hitObject == unlockingArrow)
         {
+            Debug.Log(select.hitObject + "hitted");
             unlockedArrow.SetActive(true);
 
             //text saying you unlocked a new acces way to walk around
-            thisObject.GetComponent<UnlockedArrow>().enabled = false;
+            //thisObject.GetComponent<UnlockedArrow>().enabled = false;
         }
         WiresUnlock();
     }

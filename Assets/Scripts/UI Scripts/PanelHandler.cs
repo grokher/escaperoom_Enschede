@@ -22,6 +22,7 @@ public class PanelHandler : MonoBehaviour
         }
         else if (Camera.GetComponent<MouseSelect>().activated && Camera.GetComponent<MouseSelect>().hitObject.GetComponent<PanelHandler>().linked3DPuzzle != null)
         {
+            Debug.Log("puzzle entered");
             PuzzleCamera.SetActive(true);
             Camera.SetActive(false);
             Camera.GetComponent<MouseSelect>().hitObject.GetComponent<PanelHandler>().linked3DPuzzle.SetActive(true);
