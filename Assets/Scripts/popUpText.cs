@@ -28,7 +28,7 @@ public class popUpText : MonoBehaviour
 
     IEnumerator RaamText()
     {
-        if (itemPickup.GetComponent<pickupableItems>().hasThisItem && !textShown2 && gameObject.CompareTag("Raam"))
+        if (itemPickup.GetComponent<pickupableItems>().hasThisItem && !textShown2 /*&& gameObject.CompareTag("Raam")*/)
         {
             popupText.text = "je hebt een raam ontvangen";
             yield return new WaitForSeconds(2.5f);
