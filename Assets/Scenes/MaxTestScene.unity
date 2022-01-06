@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.57780945, g: 0.53443885, b: 0.5139099, a: 1}
+  m_IndirectSpecularColor: {r: 0.57897913, g: 0.53457475, b: 0.51462436, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -216,6 +216,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1837910863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1482536785258265558, guid: 21548917085d796449c9acaa0a0848a8, type: 3}
+  m_PrefabInstance: {fileID: 1482536785118721156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2088892280
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,5 +383,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2966804958324993445, guid: 21548917085d796449c9acaa0a0848a8, type: 3}
+      propertyPath: Mouse
+      value: 
+      objectReference: {fileID: 2088892280}
+    - target: {fileID: 2966804958324993445, guid: 21548917085d796449c9acaa0a0848a8, type: 3}
+      propertyPath: wiresObj
+      value: 
+      objectReference: {fileID: 1837910863}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21548917085d796449c9acaa0a0848a8, type: 3}
