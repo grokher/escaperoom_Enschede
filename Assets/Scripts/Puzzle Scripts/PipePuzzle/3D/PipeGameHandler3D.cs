@@ -58,7 +58,7 @@ public class PipeGameHandler3D : MonoBehaviour
         }
         else
         {
-            Debug.Log("PipeCounter: " + pipeCounter + " from the " + Pipes.Length);
+            //Debug.Log("PipeCounter: " + pipeCounter + " from the " + Pipes.Length);
             pipeCounter = 0;
         }
     }

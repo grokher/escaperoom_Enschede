@@ -53,7 +53,7 @@ public class MouseSelect : MonoBehaviour
                 }
                 else
                     activated = false;
-                Debug.Log(activated);
+                //Debug.Log(activated);
                 isClicked = true;
             }
             if (isClicked == true && !inPuzzle&&!isAnimating)

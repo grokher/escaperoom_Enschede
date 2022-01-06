@@ -30,7 +30,7 @@ public class skyboxRotation : MonoBehaviour
 
     IEnumerator lockedDoor()
     {
-        Debug.Log("HITTY");
+        //Debug.Log("HITTY");
         if (Camera.main.GetComponent<MouseSelect>().hitObject.name == mozaiekArrow.name && !stopText)
         {
             stopText = false;
