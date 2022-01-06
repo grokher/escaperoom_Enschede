@@ -28,6 +28,7 @@ public class ZDVCounter : MonoBehaviour
     protected bool samenwerkenBool;
     protected bool WethouderBool;
     protected bool wetBool;
+    private bool win = false;
     private int prevPanelCounter;
     public int winCounter = 0;
     private float Timer = 3f;
@@ -37,6 +38,7 @@ public class ZDVCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         painting = GetComponent<Painting>();
         isInTheme = false;
         message.SetActive(false);
@@ -70,6 +72,7 @@ public class ZDVCounter : MonoBehaviour
       
             if (panelCounter == 3)
             {
+                win = true;
                 activeWindowCollider = painting.activeWindow.GetComponent<Collider>();
                 activeWindowCollider.enabled = !activeWindowCollider.enabled;
                 activeWindowCollider.GetComponent<Animator>().Play("RotateInf");
@@ -90,8 +93,11 @@ public class ZDVCounter : MonoBehaviour
         }
         else
             panelCounter = 0;
-        if (winCounter >= 6)
+        if (winCounter >= 6&& win)
+        {
+            win = false;
             raam.SetActive(true);
+        }
        
     }
     public void huisSelect()

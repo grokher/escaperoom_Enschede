@@ -43,8 +43,9 @@ public class Painting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        themeObject.SetActive(true);
+        themaText.text = "geen thema geselecteerd";
         counter = GetComponent<ZDVCounter>();
-        themeObject.SetActive(false);
         cam = Camera.main.gameObject;
         wetInfo.SetActive(false);
         onderwijsInfo.SetActive(false);
@@ -67,7 +68,7 @@ public class Painting : MonoBehaviour
     void Update()
     {
         if (counter.panelCounter == 3)
-            themeObject.SetActive(false);
+            themaText.text = "geen thema geselecteerd";
         if (Input.GetMouseButtonDown(0) && Camera.main.GetComponent<MouseSelect>().activated && Camera.main.GetComponent<MouseSelect>().raycastHit.name == huisVestingWorldPainting.name && clicked == false)
         {
             Info.SetActive(false);
@@ -146,7 +147,8 @@ public class Painting : MonoBehaviour
         {
             lookObject = null;
         }
-        
+
+            
         if (cam.GetComponent<MouseSelect>().isAnimating)
         {
             themeObject.SetActive(true);
@@ -217,7 +219,7 @@ public class Painting : MonoBehaviour
     {
         counter.activeWindowCollider = null;
         counter.isInTheme = false;
-        themeObject.SetActive(false);
+        themaText.text = "geen thema geselecteerd";
         clicked = false;
         activeWindow = null;
         huisVestingWorld.SetActive(false);
