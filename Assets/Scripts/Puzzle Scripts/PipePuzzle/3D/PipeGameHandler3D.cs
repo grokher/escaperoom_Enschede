@@ -9,6 +9,7 @@ public class PipeGameHandler3D : MonoBehaviour
     public GameObject MainCamera;
     public GameObject BlockedArrow;
     public GameObject SteamEmitter, SteamEmitter1;
+    public GameObject InfoWinPanel;
     int pipeCounter;
     public bool pipeGameWon;
     #endregion
@@ -45,6 +46,7 @@ public class PipeGameHandler3D : MonoBehaviour
         {
             pipeGameWon = true;
             Debug.Log("All pipes are Correct");
+            InfoWinPanel.SetActive(true);
             MainCamera.SetActive(true);
             MainCamera.GetComponent<MouseSelect>().inPuzzle = false;
             MainCamera.GetComponent<MouseSelect>().inPuzzle = true;

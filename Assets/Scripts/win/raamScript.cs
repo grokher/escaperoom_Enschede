@@ -88,11 +88,11 @@ public class raamScript : MonoBehaviour
             pickUpText.text = "";
         }
 
-        if (raamCount >= 7)
+        /*if (raamCount >= 7)
         {
             RenderSettings.skybox = skyboxArea;
             CurrentArea.SetActive(false);
             NextArea.SetActive(true);
-        }
+        }*/
     }
 }

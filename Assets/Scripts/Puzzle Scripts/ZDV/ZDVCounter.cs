@@ -12,6 +12,7 @@ public class ZDVCounter : MonoBehaviour
     public GameObject TextObject;
     public GameObject winText;
     public GameObject Feedback;
+    public GameObject winScreen;
     public GameObject raam;
     protected Painting painting;
     public Collider activeWindowCollider;
@@ -96,6 +97,7 @@ public class ZDVCounter : MonoBehaviour
         if (winCounter >= 6&& win)
         {
             win = false;
+            winScreen.SetActive(true);
             raam.SetActive(true);
         }
        
