@@ -21,6 +21,7 @@ public class VideoHandler : MonoBehaviour
             videoPlayer.clip = videoClip;
         }
         videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
+        videoPlayer.SetDirectAudioMute(0, true);
         videoPlayer.Prepare();
         videoPlayer.Play();
     }
