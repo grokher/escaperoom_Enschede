@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class raamScript : MonoBehaviour
@@ -88,11 +89,9 @@ public class raamScript : MonoBehaviour
             pickUpText.text = "";
         }
 
-        /*if (raamCount >= 7)
+        if (raamCount >= 7)
         {
-            RenderSettings.skybox = skyboxArea;
-            CurrentArea.SetActive(false);
-            NextArea.SetActive(true);
-        }*/
+            SceneManager.LoadScene("EndScene");
+        }
     }
 }
