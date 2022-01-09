@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class burgerzaalAnimHandler : MonoBehaviour
@@ -39,6 +40,8 @@ public class burgerzaalAnimHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+   
         cameraAnim = animCam.GetComponent<Animator>();
         pane1obj.SetActive(false);
         pane2obj.SetActive(false);
@@ -52,17 +55,19 @@ public class burgerzaalAnimHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
         if (!introDone)
         {
             cameraAnim.Play("IntroAnim");
             introDone = true;
         }
-        if(cameraAnim.GetCurrentAnimatorStateInfo(0).IsName("donePlaying")&&introDone)
+        if (cameraAnim.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && introDone)
         {
             animCam.SetActive(false);
             mainCam.SetActive(true);
         }
-  
+        if (currentScene.name == "EndScene")
+        {
             pane1obj.SetActive(true);
             if (pane1.GetCurrentAnimatorStateInfo(0).IsName("donePlaying") && !pane1done)
             {
@@ -118,4 +123,5 @@ public class burgerzaalAnimHandler : MonoBehaviour
             }
         }
     }
+   }
 
