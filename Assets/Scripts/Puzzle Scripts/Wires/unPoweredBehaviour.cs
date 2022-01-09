@@ -24,7 +24,6 @@ public class unPoweredBehaviour : MonoBehaviour
         if (other.GetComponent<statestiek>())
         {
             handler = other.GetComponent<Behaviour>().GameCam.GetComponent<wireHandler>();
-            Debug.Log("tring tring");
             statestiek poweredWireS = other.GetComponent<statestiek>();
             if (poweredWireS.objectColor == unpoweredWireS.objectColor)
             {
@@ -46,21 +45,24 @@ public class unPoweredBehaviour : MonoBehaviour
                 {
 
             statestiek poweredWireS = other.GetComponent<statestiek>();
-            poweredWireS.connected = false;
-            unpoweredWireS.connected = false;
+            if (poweredWireS.objectColor != unpoweredWireS.objectColor)
+            {
+                poweredWireS.connected = false;
+                unpoweredWireS.connected = false;
+            }
         }
     }
     void ManageLight()
     {
         if (unpoweredWireS.connected)
         {
-            unpoweredWireS.poweredLight.SetActive(true);
-            unpoweredWireS.unpoweredLight.SetActive(false);
+           // unpoweredWireS.poweredLight.SetActive(true);
+          //  unpoweredWireS.unpoweredLight.SetActive(false);
         }
         else
         {
-            unpoweredWireS.poweredLight.SetActive(false);
-            unpoweredWireS.unpoweredLight.SetActive(true);
+          //  unpoweredWireS.poweredLight.SetActive(false);
+         //   unpoweredWireS.unpoweredLight.SetActive(true);
         }
     }
 }

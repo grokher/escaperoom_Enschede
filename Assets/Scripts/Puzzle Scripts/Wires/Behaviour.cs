@@ -23,10 +23,13 @@ public class Behaviour : MonoBehaviour
         line.SetPosition(3, lineObject.transform.position);
        // line.SetPosition(1, new Vector3(transform.position.x - .4f, transform.position.y - .4f, transform.position.z));
 
-            if(!powerWireStats.connected&&mouse.hitObject == null)
+            if(powerWireStats.connected == false&&mouse.hitObject == null&&transform.position != powerWireStats.startPosition&&transform.position != powerWireStats.connectedPosition)
             gameObject.transform.position = powerWireStats.startPosition;
-            if (powerWireStats.connected)
-                transform.position = powerWireStats.connectedPosition;
+        if (powerWireStats.connected)
+        {
+            transform.position = powerWireStats.connectedPosition;
+            powerWireStats.movable = false;
+        }
         
     }
     void OnMouseOver()
