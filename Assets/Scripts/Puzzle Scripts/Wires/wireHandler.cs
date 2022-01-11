@@ -7,12 +7,10 @@ public class wireHandler : MonoBehaviour
 
     public int counter1 = 0;
     public int counter2 = 0;
-    public int counter3 = 0;
     public int winCounter = 0;
     public GameObject Wires;
     public GameObject level1;
     public GameObject level2;
-    public GameObject level3;
     public GameObject Mouse;
     public GameObject Box;
     public GameObject wiresObj;
@@ -23,7 +21,6 @@ public class wireHandler : MonoBehaviour
     {
         level1.SetActive(true);
         level2.SetActive(false);
-        level3.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,18 +30,14 @@ public class wireHandler : MonoBehaviour
         {
             winCounter = 1;
             counter2 = 0;
-            counter3 = 0;
             level2.SetActive(true);
             level1.SetActive(false);
         }
         if (counter2== 6)
         {
-            winCounter = 2;
-            level3.SetActive(true);
             level2.SetActive(false);
-            counter3 = 0;
         }
-        if (counter3 == 7)
+        if (counter2 == 6)
         {
             winCounter = 3;
         }

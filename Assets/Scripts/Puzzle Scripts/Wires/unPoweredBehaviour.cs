@@ -33,7 +33,6 @@ public class unPoweredBehaviour : MonoBehaviour
                 poweredWireS.connectedPosition = this.transform.position;
                 handler.counter1++;
                 handler.counter2++;
-                handler.counter3++;
 
 
             }

@@ -52,6 +52,8 @@ public class Behaviour : MonoBehaviour
 
             transform.position = GameCam.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 7));
         }
+      else  if (powerWireStats.connected == false)
+            transform.position = powerWireStats.startPosition;
         else
             powerWireStats.moving = false;
 
