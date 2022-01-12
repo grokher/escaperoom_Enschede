@@ -18,6 +18,7 @@ public class skyboxRotation : MonoBehaviour
     public TextMeshProUGUI lockedPickupText;
     [Header("lockedArrow")]
     public GameObject lockedArrow;
+    public GameObject lockedLift;
     public void NextAreaOnClick()
     {
         Debug.Log("Change F Area");
@@ -62,7 +63,12 @@ public class skyboxRotation : MonoBehaviour
         else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedArrow.name)
             stopText1 = false;
 
-        if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedArrow.name && !stopText2)
+        /**/
+    }
+
+    IEnumerator liftUnlock()
+    {
+        if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedLift.name && !stopText2)
         {
             stopText2 = false;
             lockedPickupText.text = "je moet iets in de machinekamer repareren";
@@ -70,7 +76,7 @@ public class skyboxRotation : MonoBehaviour
             lockedPickupText.text = "";
             stopText2 = true;
         }
-        else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedArrow.name)
+        else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedLift.name)
             stopText2 = false;
     }
 
@@ -78,5 +84,6 @@ public class skyboxRotation : MonoBehaviour
     {
         StartCoroutine(lockedDoor());
         StartCoroutine(UnlockingArrow());
+        StartCoroutine(liftUnlock());
     }
 }
