@@ -7,15 +7,17 @@ public class skyboxRotation : MonoBehaviour
 {
     //raycast hit -> moves next specific area
     public Material skyboxArea;
-    
+
     public GameObject CurrentArea;
     public GameObject NextArea;
     public TextMeshProUGUI locationTexts;
     public GameObject bookText;
-    private bool stopText;
+    private bool stopText, stopText1, stopText2;
     [Header("lockedDoorPart")]
     public GameObject mozaiekArrow;
     public TextMeshProUGUI lockedPickupText;
+    [Header("lockedArrow")]
+    public GameObject lockedArrow;
     public void NextAreaOnClick()
     {
         Debug.Log("Change F Area");
@@ -47,8 +49,34 @@ public class skyboxRotation : MonoBehaviour
         }
     }
 
+    IEnumerator UnlockingArrow()
+    {
+        if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedArrow.name && !stopText1)
+        {
+            stopText1 = false;
+            lockedPickupText.text = "je moet eerst ergens anders heen voordat je deze kant op kan lopen";
+            yield return new WaitForSeconds(3f);
+            lockedPickupText.text = "";
+            stopText1 = true;
+        }
+        else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedArrow.name)
+            stopText1 = false;
+
+        if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedArrow.name && !stopText2)
+        {
+            stopText2 = false;
+            lockedPickupText.text = "je moet iets in de machinekamer repareren";
+            yield return new WaitForSeconds(3f);
+            lockedPickupText.text = "";
+            stopText2 = true;
+        }
+        else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedArrow.name)
+            stopText2 = false;
+    }
+
     public void Update()
     {
         StartCoroutine(lockedDoor());
+        StartCoroutine(UnlockingArrow());
     }
 }
