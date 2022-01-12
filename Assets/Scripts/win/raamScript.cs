@@ -10,7 +10,7 @@ public class raamScript : MonoBehaviour
     public Material skyboxArea;
     public GameObject CurrentArea;
     public GameObject NextArea;
-
+    public TextMeshProUGUI counterTxt;
     public MouseSelect mouse;
     //public winCondition win;
     public GameObject raam, raam1, raam2, raam3, raam4, raam5, raam6;
@@ -29,6 +29,7 @@ public class raamScript : MonoBehaviour
     void Update()
     {
         StartCoroutine(windowPickup());
+        counterTxt.text = raamCount.ToString();
     }
     IEnumerator windowPickup()
     {

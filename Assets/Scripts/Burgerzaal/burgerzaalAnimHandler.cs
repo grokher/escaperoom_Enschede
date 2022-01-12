@@ -6,6 +6,10 @@ using UnityEngine;
 public class burgerzaalAnimHandler : MonoBehaviour
 {
     private MouseSelect mouseSelect;
+    private GameObject firstActiveGameObject;
+    public GameObject logBoek;
+    public GameObject questPage;
+    public GameObject questPageMarker;
     [Header("Animators")]
     public Animator pane1;
     public Animator pane2;
@@ -65,6 +69,10 @@ public class burgerzaalAnimHandler : MonoBehaviour
         {
             animCam.SetActive(false);
             mainCam.SetActive(true);
+            logBoek.SetActive(true);
+            logBoek.GetComponent<LogboekTracker>().currentPage.SetActive(false);
+            questPage.SetActive(true);
+            questPageMarker.SetActive(true);
         }
         if (currentScene.name == "EndScene")
         {
