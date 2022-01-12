@@ -9,6 +9,7 @@ public class VideoHandler : MonoBehaviour
     GameObject Camera;
     VideoPlayer videoPlayer;
     public VideoClip videoClip;
+    public skyboxRotation nextLevel;
     #endregion
     void Awake()
     {
@@ -36,5 +37,6 @@ public class VideoHandler : MonoBehaviour
     {
         vp.enabled = false;
         Camera.GetComponent<MouseSelect>().enabled = true;
+        nextLevel.NextAreaOnClick();
     }
 }
