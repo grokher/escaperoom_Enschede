@@ -6,10 +6,13 @@ public class RotationCheck : MonoBehaviour
 {
     #region variables
     public GameObject turnableRing1;
-    public GameObject turnableRing2;
+    public GameObject turnableRing2, klokInfoPanel;
     public GameObject[] answerButtons;
     #endregion
-
+    private void Awake()
+    {
+        klokInfoPanel.SetActive(true);
+    }
     void Update()
     {
         if (turnableRing1.transform.rotation.eulerAngles.y <= 320 && turnableRing1.transform.rotation.eulerAngles.y >= 305 && turnableRing2.transform.rotation.eulerAngles.y <= 315 && turnableRing2.transform.rotation.eulerAngles.y >= 300)

@@ -12,7 +12,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public bool inSlot = false;
     public bool inCorrectSlot = false;
     private CanvasGroup canvasGroup;
-    public GameObject cypherpuzzle;
+    public GameObject cypherpuzzle, cypherActivationObject;
     public GameObject raam;
     public GameObject WinPanel;
     private void Awake()
@@ -65,5 +65,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         raam.SetActive(true);
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseSelect>().inPuzzle = false;
         cypherpuzzle.SetActive(false);
+        cypherActivationObject.SetActive(false);
     }
 }
