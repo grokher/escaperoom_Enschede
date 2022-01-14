@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class burgerzaalAnimHandler : MonoBehaviour
 {
     private MouseSelect mouseSelect;
     private GameObject firstActiveGameObject;
+    public GameObject allObjects;
+    public float Timer = 10f;
     public GameObject logBoek;
     public GameObject questPage;
     public GameObject questPageMarker;
+    public GameObject fade;
     [Header("Animators")]
     public Animator pane1;
     public Animator pane2;
@@ -44,8 +48,6 @@ public class burgerzaalAnimHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-   
         cameraAnim = animCam.GetComponent<Animator>();
         pane1obj.SetActive(false);
         pane2obj.SetActive(false);
@@ -59,6 +61,7 @@ public class burgerzaalAnimHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+     
         Scene currentScene = SceneManager.GetActiveScene();
         if (!introDone)
         {
@@ -127,8 +130,18 @@ public class burgerzaalAnimHandler : MonoBehaviour
                 pane5.Play("Panel5");
                 pane6.Play("Panel6");
                 pane7.Play("Panel7");
-
+                fade.GetComponent<Animator>().enabled = true;
+                fade.GetComponent<Animator>().Play("endFade");
+                Timer -= 1 * Time.deltaTime;
+                Debug.Log(Timer);
             }
+            if (Timer <= 0)
+            {
+                fade.SetActive(false);
+                Camera.main.GetComponent<VideoPlayer>().enabled = true;
+                allObjects.SetActive(false);
+            }
+
         }
     }
    }

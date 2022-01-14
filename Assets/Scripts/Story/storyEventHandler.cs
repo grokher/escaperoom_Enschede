@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class storyEventHandler : MonoBehaviour
 {
     private float Timer = 12.5f;
     public GameObject text;
+    public GameObject text2;
     public GameObject fade;
+    public GameObject imageHolder;
+    protected VideoPlayer player;
     public Texture TextScherm;
     public Texture bode1;
     public Texture bode2;
@@ -22,12 +26,16 @@ public class storyEventHandler : MonoBehaviour
     private bool bode3Done = false;
     private bool bode4Done = false;
     private bool bode5Done = false;
+    private bool lastTextDone = false;
+    private bool videoPlayed = false;
 
     // Start is called before the first frame update
     void Start()
     {
    m_rawImage = GetComponent<RawImage>();
         m_rawImage.texture = TextScherm;
+        player = Camera.main.GetComponent<VideoPlayer>();
+        player.enabled = false;
      
     }
 
@@ -72,8 +80,25 @@ public class storyEventHandler : MonoBehaviour
         if(Timer <= 0 && !bode5Done)
         {
             bode5Done = true;
-            SceneManager.LoadScene(3);
+            m_rawImage.texture = TextScherm;
+            text2.SetActive(true);
+            Timer = 3f;
+            lastTextDone = true;
+           
+            //SceneManager.LoadScene(3);
         }
+
+        if (Timer <= 0 && lastTextDone&&!videoPlayed)
+        {
+            videoPlayed = true;
+            imageHolder.SetActive(false);
+            player.enabled = true;
+            Timer = 20f;
+            fade.GetComponent<Animator>().Play("videoFade");
+            GetComponent<RawImage>().enabled = false;
+        }
+       if(Timer <= 10f&&videoPlayed)
+            SceneManager.LoadScene(3);
     }
 
     public void SkipButton()
