@@ -9,11 +9,10 @@ public class burgerzaalAnimHandler : MonoBehaviour
     private MouseSelect mouseSelect;
     private GameObject firstActiveGameObject;
     public GameObject allObjects;
-    public float Timer = 10f;
+    public float Timer = 5f;
     public GameObject logBoek;
     public GameObject questPage;
     public GameObject questPageMarker;
-    public GameObject fade;
     [Header("Animators")]
     public Animator pane1;
     public Animator pane2;
@@ -130,14 +129,14 @@ public class burgerzaalAnimHandler : MonoBehaviour
                 pane5.Play("Panel5");
                 pane6.Play("Panel6");
                 pane7.Play("Panel7");
-                fade.GetComponent<Animator>().enabled = true;
-                fade.GetComponent<Animator>().Play("endFade");
                 Timer -= 1 * Time.deltaTime;
                 Debug.Log(Timer);
             }
             if (Timer <= 0)
             {
-                fade.SetActive(false);
+
+                Camera.main.GetComponent<endTextHandler>().doanim = true;
+                Camera.main.GetComponent<endTextHandler>().Timer = 5.5f;
                 Camera.main.GetComponent<VideoPlayer>().enabled = true;
                 allObjects.SetActive(false);
             }
