@@ -54,7 +54,6 @@ public class skyboxRotation : MonoBehaviour
     {
         if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedArrow.name && !stopText1)
         {
-            stopText1 = false;
             lockedPickupText.text = "je moet eerst ergens anders heen voordat je deze kant op kan lopen";
             yield return new WaitForSeconds(3f);
             lockedPickupText.text = "";
@@ -62,15 +61,12 @@ public class skyboxRotation : MonoBehaviour
         }
         else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedArrow.name)
             stopText1 = false;
-
-        /**/
     }
 
     IEnumerator liftUnlock()
     {
         if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedLift.name && !stopText2)
         {
-            
             lockedPickupText.text = "Je moet iets in de machinekamer repareren";
             yield return new WaitForSeconds(3f);
             lockedPickupText.text = "";
