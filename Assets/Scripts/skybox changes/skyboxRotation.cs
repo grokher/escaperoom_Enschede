@@ -70,8 +70,8 @@ public class skyboxRotation : MonoBehaviour
     {
         if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedLift.name && !stopText2)
         {
-            stopText2 = false;
-            lockedPickupText.text = "je moet iets in de machinekamer repareren";
+            
+            lockedPickupText.text = "Je moet iets in de machinekamer repareren";
             yield return new WaitForSeconds(3f);
             lockedPickupText.text = "";
             stopText2 = true;
