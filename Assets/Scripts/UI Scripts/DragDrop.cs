@@ -15,6 +15,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public GameObject cypherpuzzle, cypherActivationObject;
     public GameObject raam;
     public GameObject WinPanel;
+    public SaveToFile saveScript;
     private void Awake()
     {
         inSlot = false;
@@ -64,6 +65,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         WinPanel.SetActive(true);
         raam.SetActive(true);
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseSelect>().inPuzzle = false;
+        saveScript.Save(gameObject);
         cypherpuzzle.SetActive(false);
         cypherActivationObject.SetActive(false);
     }

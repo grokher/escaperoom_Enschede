@@ -36,6 +36,7 @@ public class ZDVCounter : MonoBehaviour
     public bool isInTheme;
     private Text counterText;
     private TextMeshProUGUI winCounterText;
+    public SaveToFile saveScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +99,7 @@ public class ZDVCounter : MonoBehaviour
         {
             win = false;
             winScreen.SetActive(true);
+            saveScript.Save(gameObject);
             raam.SetActive(true);
         }
        

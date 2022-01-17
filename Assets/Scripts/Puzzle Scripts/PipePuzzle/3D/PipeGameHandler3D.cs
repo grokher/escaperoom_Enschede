@@ -12,6 +12,7 @@ public class PipeGameHandler3D : MonoBehaviour
     public GameObject InfoWinPanel;
     int pipeCounter;
     public bool pipeGameWon;
+    public SaveToFile saveScript;
     #endregion
     void Awake()
     {
@@ -45,6 +46,7 @@ public class PipeGameHandler3D : MonoBehaviour
         if (pipeCounter == Pipes.Length)
         {
             pipeGameWon = true;
+            saveScript.Save(gameObject);
             Debug.Log("All pipes are Correct");
             InfoWinPanel.SetActive(true);
             MainCamera.SetActive(true);

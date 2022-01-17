@@ -11,6 +11,7 @@ public class UnlockedArrow : MonoBehaviour
     public GameObject swapObject;
     public GameObject Wires;
     public GameObject thisObject;
+    public SaveToFile saveScript;
 
     private void Update()
     {
@@ -18,6 +19,7 @@ public class UnlockedArrow : MonoBehaviour
         {
             Debug.Log(select.hitObject + "hitted");
             unlockedArrow.SetActive(true);
+            saveScript.Save(gameObject);
             swapObject.SetActive(false);
             //text saying you unlocked a new acces way to walk around
             //thisObject.GetComponent<UnlockedArrow>().enabled = false;

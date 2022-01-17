@@ -26,4 +26,9 @@ public class MainMenu : MonoBehaviour
     {
         //SceneManager.LoadScene(); // load credits scene
     }
+    public void ResetSave()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Intro Scene");
+    }
 }

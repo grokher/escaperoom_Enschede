@@ -11,10 +11,12 @@ public class SkyBoxRotationTutorial : MonoBehaviour
     public Camera mainCamera;
     public pickupableItems itemObject;
     public GameObject bookText;
+    public SaveToFile saveScript;
     public void Update()
     {
         if (mainCamera.GetComponent<MouseSelect>().activated && mainCamera.GetComponent<MouseSelect>().raycastHit.name == gameObject.name && itemObject.GetComponent<pickupableItems>().hasThisItem)
         {
+            saveScript.Save(gameObject);
             skyboxChange.NextAreaOnClick();
         }
         else if(mainCamera.GetComponent<MouseSelect>().activated && mainCamera.GetComponent<MouseSelect>().raycastHit.name == gameObject.name && !itemObject.GetComponent<pickupableItems>().hasThisItem)

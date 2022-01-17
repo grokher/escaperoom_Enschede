@@ -14,6 +14,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject[] dragableTexts;
     public TextMeshProUGUI linkedText;
     public GameObject BurocratiousLinkedDoor;
+    public SaveToFile saveScript;
     #endregion
 
     #region Scene Based Buttons
@@ -78,6 +79,7 @@ public class ButtonManager : MonoBehaviour
         linkedText.color = new UnityEngine.Color(0f, 90f, 0f);
         linkedText.text = "Juiste antwoord is gegeven!";
         linkedText.gameObject.SetActive(true);
+        saveScript.Save(gameObject);
         gameObject.SetActive(false);
     }
     public void DraaischijfpuzzleWrongAnswer()
@@ -93,6 +95,7 @@ public class ButtonManager : MonoBehaviour
     public void BurocratieRightAnswer()
     {
         BurocratiousLinkedDoor.SetActive(true);
+        saveScript.Save(gameObject);
     }
     #endregion
 }

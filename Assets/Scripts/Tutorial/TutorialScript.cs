@@ -16,7 +16,7 @@ public class TutorialScript : MonoBehaviour
     public bool Key;
     private bool pickingupText;
     bool boolean = false;
-
+    public SaveToFile saveScript;
     private void Update()
     {
         StartCoroutine("tutorialScript");
@@ -31,6 +31,7 @@ public class TutorialScript : MonoBehaviour
             Debug.Log("did the text");
             tutorialsText.text = "je hebt de sleutel gevonden \n maak nu de deur open";
             Key = true;
+            saveScript.Save(gameObject);
             if(Key == true && !pickingupText)
             {
                 journalCanvas.SetActive(true);
