@@ -17,6 +17,7 @@ public class wireHandler : MonoBehaviour
     public GameObject liftArrow;
     public GameObject fakeLiftArrow;
     public GameObject infoWinPanel;
+    public GameObject lift;
     public SaveToFile saveScript;
     // Start is called before the first frame update
     void Start()
@@ -49,10 +50,12 @@ public class wireHandler : MonoBehaviour
             saveScript.Save(gameObject);
             infoWinPanel.SetActive(true);
             fakeLiftArrow.SetActive(false);
+            lift.SetActive(true);
             liftArrow.SetActive(true);
             Mouse.SetActive(true);
             Box.SetActive(true);
             wiresObj.SetActive(false);
+
         }
  
     }
