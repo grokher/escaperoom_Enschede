@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class flashScreenScript : MonoBehaviour
+public class flashScreenScript : PlayVideoInWebGL
 {
     void Start()
     {
@@ -12,6 +12,7 @@ public class flashScreenScript : MonoBehaviour
 
     IEnumerator ToMainMenu()
     {
+        SplashScreenPlay();
         yield return new WaitForSeconds(7.5f);
         SceneManager.LoadScene(1);
     }
