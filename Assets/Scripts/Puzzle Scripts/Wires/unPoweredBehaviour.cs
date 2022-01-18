@@ -37,7 +37,7 @@ public class unPoweredBehaviour : MonoBehaviour
 
             }
         }   
-    }
+    }/*
      void OnTriggerExit(Collider other)
     {
         if( other.GetComponent<statestiek>())
@@ -50,7 +50,7 @@ public class unPoweredBehaviour : MonoBehaviour
                 unpoweredWireS.connected = false;
             }
         }
-    }
+    }*/
     void ManageLight()
     {
         if (unpoweredWireS.connected)

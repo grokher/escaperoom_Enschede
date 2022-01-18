@@ -32,10 +32,12 @@ public class GameMouseSelect : MonoBehaviour
                 }
                 else
                     hitObject = null;
-                
-                    
+
+
                 Debug.Log(activated);
             }
+            else if (Input.GetMouseButtonUp(0))
+                activated = false;
         }
     }
 }
