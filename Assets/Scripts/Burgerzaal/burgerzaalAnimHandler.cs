@@ -64,6 +64,7 @@ public class burgerzaalAnimHandler : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         if (!introDone)
         {
+
             cameraAnim.Play("IntroAnim");
             introDone = true;
         }
