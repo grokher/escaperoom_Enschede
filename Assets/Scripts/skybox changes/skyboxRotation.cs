@@ -34,18 +34,20 @@ public class skyboxRotation : MonoBehaviour
     IEnumerator lockedDoor()
     {
         //Debug.Log("HITTY");
-        if (Camera.main.GetComponent<MouseSelect>().hitObject.name == mozaiekArrow.name && !stopText)
+        if (Camera.main.GetComponent<MouseSelect>().hitObject.name == mozaiekArrow.name)
         {
             lockedPickupText.text = "je hebt een sleutel nodig om de deur te openen";
-            yield return new WaitForSeconds(1.5f);
-            lockedPickupText.text = "";
-            stopText = true;
-        }
-        else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != mozaiekArrow.name)
-        {
-            stopText = false;
-            lockedPickupText.text = "";
-        }
+            yield return new WaitForEndOfFrame();
+               yield return new WaitForSeconds(1.5f);
+                lockedPickupText.text = "";
+                stopText = true;
+            }
+            else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != mozaiekArrow.name)
+           {
+                stopText = false;
+               lockedPickupText.text = "";
+        
+      }
     }
 
     IEnumerator UnlockingArrow()
