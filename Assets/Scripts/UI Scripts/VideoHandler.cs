@@ -8,9 +8,8 @@ public class VideoHandler : MonoBehaviour
     #region variables
     GameObject Camera;
     VideoPlayer videoPlayer;
+    public VideoClip videoClip;
     public skyboxRotation nextLevel;
-    [SerializeField]
-    private string liftVideoName;
     #endregion
     void Awake()
     {
@@ -20,7 +19,7 @@ public class VideoHandler : MonoBehaviour
         Camera.GetComponent<MouseSelect>().enabled = false;
         if (videoPlayer.clip == null)
         {
-            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, liftVideoName);
+            videoPlayer.clip = videoClip;
         }
         videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
         videoPlayer.SetDirectAudioMute(0, true);
