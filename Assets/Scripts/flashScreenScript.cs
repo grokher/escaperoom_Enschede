@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class flashScreenScript : MonoBehaviour
 {
+   
     void Start()
     {
-            StartCoroutine(ToMainMenu());
+        StartCoroutine(ToMainMenu());
     }
 
     IEnumerator ToMainMenu()
