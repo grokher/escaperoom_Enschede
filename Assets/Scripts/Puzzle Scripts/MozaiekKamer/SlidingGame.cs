@@ -85,7 +85,6 @@ public class SlidingGame : MonoBehaviour
         }
         if (correctTiles == tiles.Length)
         {
-            Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
             emptySpace.GetComponent<SpriteRenderer>().enabled = true;
             WinScreen.SetActive(true);
             player.SetActive(true);

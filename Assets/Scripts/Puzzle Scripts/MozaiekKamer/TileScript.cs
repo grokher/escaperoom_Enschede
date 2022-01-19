@@ -37,7 +37,7 @@ public class TileScript : MonoBehaviour
             correctY = Mathf.Abs(transform.position.y - beginPos.y);
             correctZ = Mathf.Abs(transform.position.z - beginPos.z);
         }
-        if (correctX <= 0.05f && correctY <= 0.05f && correctZ <= 0.05f)
+        if (correctX <= 0.1f && correctY <= 0.1f && correctZ <= 0.1f)
         {
             inRightPlace = true;
 
