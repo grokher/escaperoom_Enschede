@@ -44,6 +44,7 @@ public class popUpText : MonoBehaviour
             popupText.text = "je hebt de sleutel voor de mozaiek kamer ontvangen";
             yield return new WaitForSeconds(2.5f);
             popupText.text = "";
+            textShown3 = true;
         }
     }
 }

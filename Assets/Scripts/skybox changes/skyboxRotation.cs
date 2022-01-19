@@ -36,17 +36,15 @@ public class skyboxRotation : MonoBehaviour
         //Debug.Log("HITTY");
         if (Camera.main.GetComponent<MouseSelect>().hitObject.name == mozaiekArrow.name && !stopText)
         {
-            stopText = false;
-            Debug.Log("Text HIt");
             lockedPickupText.text = "je hebt een sleutel nodig om de deur te openen";
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1.5f);
             lockedPickupText.text = "";
             stopText = true;
-            
         }
-        if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != mozaiekArrow.name)
+        else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != mozaiekArrow.name)
         {
             stopText = false;
+            lockedPickupText.text = "";
         }
     }
 
@@ -54,13 +52,17 @@ public class skyboxRotation : MonoBehaviour
     {
         if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedArrow.name && !stopText1)
         {
-            lockedPickupText.text = "je moet eerst ergens anders heen voordat je deze kant op kan lopen";
-            yield return new WaitForSeconds(3f);
+            lockedPickupText.text = "je moet eerst ergens anders heen";
+            yield return new WaitForSeconds(1.5f);
             lockedPickupText.text = "";
             stopText1 = true;
         }
         else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedArrow.name)
+        {
             stopText1 = false;
+            lockedPickupText.text = "";
+        }
+            
     }
 
     IEnumerator liftUnlock()
@@ -73,7 +75,10 @@ public class skyboxRotation : MonoBehaviour
             stopText2 = true;
         }
         else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedLift.name)
+        {
             stopText2 = false;
+            lockedPickupText.text = "";
+        }
     }
 
     public void Update()
