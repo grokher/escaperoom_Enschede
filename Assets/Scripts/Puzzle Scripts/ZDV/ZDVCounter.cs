@@ -12,6 +12,7 @@ public class ZDVCounter : MonoBehaviour
     public GameObject TextObject;
     public GameObject winText;
     public GameObject Feedback;
+    public GameObject foundText;
     public GameObject winScreen;
     public GameObject raam;
     protected Painting painting;
@@ -49,7 +50,14 @@ public class ZDVCounter : MonoBehaviour
         winCounterText = winText.GetComponent<TextMeshProUGUI>();
         prevPanelCounter = panelCounter;
     }
-
+    IEnumerator completeTheme()
+    {
+        foundText.GetComponent<TextMeshProUGUI>().text = "Thema compleet!";
+        Feedback.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Feedback.SetActive(false);
+        foundText.GetComponent<TextMeshProUGUI>().text = "Voorwerp gevonden!";
+    }
     // Update is called once per frame
     void Update()
     {
@@ -71,9 +79,11 @@ public class ZDVCounter : MonoBehaviour
                 wethouderCount = panelCounter;
             if (wetBool)
                 wetCount = panelCounter;
-      
+
             if (panelCounter == 3)
             {
+                StartCoroutine("completeTheme");
+
                 win = true;
                 activeWindowCollider = painting.activeWindow.GetComponent<Collider>();
                 activeWindowCollider.enabled = !activeWindowCollider.enabled;
@@ -94,7 +104,10 @@ public class ZDVCounter : MonoBehaviour
                 Feedback.SetActive(false);
         }
         else
+        {
+            TextObject.SetActive(false);
             panelCounter = 0;
+        }
         if (winCounter >= 6&& win)
         {
             win = false;
@@ -135,6 +148,7 @@ public class ZDVCounter : MonoBehaviour
         wetBool = true;
         panelCounter = wetCount;
     }
+
     public void allBack()
     {
         huisBool = false;

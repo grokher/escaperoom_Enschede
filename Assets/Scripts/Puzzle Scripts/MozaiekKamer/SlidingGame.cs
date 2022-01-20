@@ -8,7 +8,7 @@ public class SlidingGame : MonoBehaviour
     public GameObject player;
     public Camera newCamera;
     public GameObject NewCameraObject;
-    public GameObject MozaiekUI;
+   // public GameObject MozaiekUI;
     public GameObject MozaiekPanel;
     public GameObject exitButton;
     public GameObject raam;
@@ -22,7 +22,7 @@ public class SlidingGame : MonoBehaviour
     [SerializeField] private int clickTimes = 1;
      void Awake() {
         player.SetActive(false);
-        MozaiekUI.SetActive(true);
+     //   MozaiekUI.SetActive(true);
         NewCameraObject.SetActive(true);
         hasShuffled = false;
         hasClicked = false;
@@ -35,7 +35,7 @@ public class SlidingGame : MonoBehaviour
         {
             player.SetActive(false);
             NewCameraObject.SetActive(true);
-            MozaiekUI.SetActive(true);
+   //         MozaiekUI.SetActive(true);
         }
         StartCoroutine("MoveTile");
      }
