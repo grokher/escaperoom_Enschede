@@ -12,7 +12,7 @@ public class skyboxRotation : MonoBehaviour
     public GameObject NextArea;
     public TextMeshProUGUI locationTexts;
     public GameObject bookText;
-    private bool stopText, stopText1, stopText2;
+  //  private bool stopText, stopText1, stopText2;
     [Header("lockedDoorPart")]
     public GameObject mozaiekArrow;
     public TextMeshProUGUI lockedPickupText;
@@ -38,48 +38,25 @@ public class skyboxRotation : MonoBehaviour
         {
             lockedPickupText.text = "je hebt een sleutel nodig om de deur te openen";
             yield return new WaitForEndOfFrame();
-               yield return new WaitForSeconds(1.5f);
-                lockedPickupText.text = "";
-                stopText = true;
-            }
-            else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != mozaiekArrow.name)
-           {
-                stopText = false;
-               lockedPickupText.text = "";
-        
-      }
+        }
     }
 
     IEnumerator UnlockingArrow()
     {
-        if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedArrow.name && !stopText1)
-        {
-            lockedPickupText.text = "je moet eerst ergens anders heen";
-            yield return new WaitForSeconds(1.5f);
-            lockedPickupText.text = "";
-            stopText1 = true;
-        }
-        else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedArrow.name)
-        {
-            stopText1 = false;
-            lockedPickupText.text = "";
-        }
-            
+            if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedArrow.name)
+            {
+                lockedPickupText.text = "je moet eerst ergens anders heen";
+                yield return new WaitForEndOfFrame();
+            }  
     }
 
     IEnumerator liftUnlock()
     {
-        if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedLift.name && !stopText2)
+        if (Camera.main.GetComponent<MouseSelect>().hitObject.name == lockedLift.name)
         {
             lockedPickupText.text = "Je moet iets in de machinekamer repareren";
-            yield return new WaitForSeconds(3f);
-            lockedPickupText.text = "";
-            stopText2 = true;
-        }
-        else if (Camera.main.GetComponent<MouseSelect>().raycastHit.name != lockedLift.name)
-        {
-            stopText2 = false;
-            lockedPickupText.text = "";
+                yield return new WaitForEndOfFrame();
+          
         }
     }
 

@@ -6,7 +6,7 @@ using TMPro;
 public class ForceEmptyText : MonoBehaviour
 {
     private TextMeshProUGUI popUp;
-    public MouseSelect mouse;
+    private MouseSelect mouse;
     // Start is called before the first frame update
     void Start()
     {
