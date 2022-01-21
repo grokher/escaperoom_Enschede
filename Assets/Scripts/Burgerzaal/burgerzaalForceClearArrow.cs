@@ -5,6 +5,7 @@ using UnityEngine;
 public class burgerzaalForceClearArrow : MonoBehaviour
 {
     public GameObject eventSys;
+    public bool burgerzaalDone;
 
     // Start is called before the first frame update
     void Start()
@@ -17,5 +18,9 @@ public class burgerzaalForceClearArrow : MonoBehaviour
     {
         if (eventSys.GetComponent<SaveToFile>().burgerZaalCleared == 1)
             gameObject.SetActive(false);
+        if (burgerzaalDone)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
