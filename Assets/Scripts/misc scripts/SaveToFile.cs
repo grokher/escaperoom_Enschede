@@ -62,8 +62,8 @@ public class SaveToFile : MonoBehaviour
         }
         if(burgerZaalCleared == 1)
         {
-            sleutelgatHal.GetComponent<burgerzaalForceClearArrow>().burgerzaalDone = true;
-            sleutelgatHal.SetActive(false);
+            //sleutelgatHal.GetComponent<burgerzaalForceClearArrow>().burgerzaalDone = true;
+            Destroy(sleutelgatHal);
             naar5deurhall.SetActive(true);
         }
         if (zDT == 1)
