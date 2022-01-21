@@ -58,6 +58,18 @@ public class ZDVCounter : MonoBehaviour
         Feedback.SetActive(false);
         foundText.GetComponent<TextMeshProUGUI>().text = "Voorwerp gevonden!";
     }
+    IEnumerator exitThema()
+    {
+        foundText.GetComponent<TextMeshProUGUI>().text = "Thema verlaten";
+        Feedback.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Feedback.SetActive(false);
+        foundText.GetComponent<TextMeshProUGUI>().text = "Voorwerp gevonden!";
+    }
+    public void themaExit()
+    {
+        StartCoroutine("exitThema");
+    }
     // Update is called once per frame
     void Update()
     {
