@@ -7,8 +7,9 @@ public class SaveToFile : MonoBehaviour
     #region variables
     public GameObject collegeKamer, sleutelgatHal,naar5deurhall, zDTPuzzleActivater, pipesActivater,steamOrigin, steamOrigin2, pipePuzzleHallArrow, draaischijfActivater ,
         burocratiusArrow, burocratiusFakeArrow,burocratiusActivater, cypherActivater, wiresActivator, liftArrow, liftFakeArrow, mozaiekArrow, raamTorenFoto, raamArchiefFoto, raamTrouwzaalFoto, raadzaalText;
-    int tutorial, zDT, pipes, cypher, wires, burocratius, draaischijf, mozaiek, burgerZaalCleared, raamToren, raamArchief, raamTrouwzaal;
+    int tutorial, zDT, pipes, cypher, wires, burocratius, draaischijf, mozaiek, raamToren, raamArchief, raamTrouwzaal;
     int tutorialkey, torenKey, ramenCounter;
+    public int burgerZaalCleared;
     #endregion
 
     private void Awake()
