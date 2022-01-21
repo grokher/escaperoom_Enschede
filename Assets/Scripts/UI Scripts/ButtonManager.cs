@@ -32,7 +32,10 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene(currentScene.buildIndex - 1);
     }
-
+    public void loadMain()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
    public void CloseApplication()
     {
         Application.Quit();
