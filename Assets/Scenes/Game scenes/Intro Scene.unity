@@ -248,7 +248,7 @@ RectTransform:
   m_Children:
   - {fileID: 1518863491}
   m_Father: {fileID: 853657214}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -662,7 +662,7 @@ VideoPlayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790042018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_VideoClip: {fileID: 32900000, guid: bac386d2dd04efa40aeadb5c0d3ccc28, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
@@ -784,8 +784,8 @@ RectTransform:
   - {fileID: 483522241}
   - {fileID: 1017093419}
   - {fileID: 1158109516}
-  - {fileID: 202647408}
   - {fileID: 867874084}
+  - {fileID: 202647408}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -824,7 +824,7 @@ RectTransform:
   - {fileID: 1415324801}
   - {fileID: 657084717}
   m_Father: {fileID: 853657214}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: cc93923e72f0c4040b250e1401c90e39, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
