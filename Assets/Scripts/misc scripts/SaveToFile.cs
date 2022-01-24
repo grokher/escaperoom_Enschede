@@ -6,7 +6,7 @@ public class SaveToFile : MonoBehaviour
 {
     #region variables
     public GameObject collegeKamer, sleutelgatHal, naar5deurhall, zDTPuzzleActivater, pipesActivater, steamOrigin, steamOrigin2, pipePuzzleHallArrow, draaischijfActivater,
-        burocratiusArrow, burocratiusFakeArrow, burocratiusActivater, cypherActivater, wiresActivator, liftArrow, liftFakeArrow, mozaiekArrow, raamTorenFoto, raamArchiefFoto, raamTrouwzaalFoto, raadzaalText;
+        burocratiusArrow, burocratiusFakeArrow, burocratiusActivater, cypherActivater, wiresActivator, liftArrow, liftFakeArrow, mozaiekArrow, raamTorenFoto, raamArchiefFoto, raamTrouwzaalFoto, raadzaalText, burgerzaalPage, burgerzaalPageMarker, logboekButton;
     int tutorial, zDT, pipes, cypher, wires, burocratius, draaischijf, mozaiek, raamToren, raamArchief, raamTrouwzaal;
     int tutorialkey, torenKey, ramenCounter;
     public int burgerZaalCleared;
@@ -65,6 +65,8 @@ public class SaveToFile : MonoBehaviour
             //sleutelgatHal.GetComponent<burgerzaalForceClearArrow>().burgerzaalDone = true;
             Destroy(sleutelgatHal);
             naar5deurhall.SetActive(true);
+            burgerzaalPageMarker.SetActive(true);
+            logboekButton.SetActive(true);
         }
         if (zDT == 1)
         {
