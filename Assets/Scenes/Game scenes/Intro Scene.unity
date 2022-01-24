@@ -366,7 +366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &483522241
 RectTransform:
   m_ObjectHideFlags: 0
@@ -927,7 +927,7 @@ MonoBehaviour:
   bode3: {fileID: 2800000, guid: 851c1297820f5b049bca47d9106474ca, type: 3}
   bode4: {fileID: 2800000, guid: 643d046a25bc7e9479c346d1c781f4c2, type: 3}
   bode5: {fileID: 2800000, guid: 6b7b4afcb25210f4b9a825d8b7a67250, type: 3}
-  isWebGL: 0
+  isWebGL: 1
 --- !u!1 &1158109515
 GameObject:
   m_ObjectHideFlags: 0
