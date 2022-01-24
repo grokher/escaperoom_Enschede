@@ -667,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 1490033328}
     - target: {fileID: 8193613181294467833, guid: b537b87602961dd4cb58bf06e4734252, type: 3}
       propertyPath: isWebGL
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8193613181294467833, guid: b537b87602961dd4cb58bf06e4734252, type: 3}
       propertyPath: mainCam
