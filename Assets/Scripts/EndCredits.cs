@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class EndCredits : MonoBehaviour
@@ -17,11 +18,16 @@ public class EndCredits : MonoBehaviour
     {
         endCredits();
     }
-
+  
     public void endCredits()
     {
-        if(Animator.GetCurrentAnimatorStateInfo(0).IsName("almost ending"))
-        credits.SetActive(false);
+        if (Animator.GetCurrentAnimatorStateInfo(0).IsName("almost ending"))
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name == "Credits")
+                SceneManager.LoadScene("MainMenu");
+            else credits.SetActive(false);
+        }
     }
 
 }

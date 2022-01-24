@@ -31,6 +31,8 @@ public class burgerzaalAnimHandler : MonoBehaviour
     public GameObject pane5obj;
     public GameObject pane6obj;
     public GameObject pane7obj;
+    public GameObject webGlImage;
+    public bool isWebGL;
     private bool pane1done = false;
     private bool pane2done = false;
     private bool pane3done = false;
@@ -133,12 +135,19 @@ public class burgerzaalAnimHandler : MonoBehaviour
                 Timer -= 1 * Time.deltaTime;
                 Debug.Log(Timer);
             }
-            if (Timer <= 0)
+            if (Timer <= 0&&!isWebGL)
             {
 
                 Camera.main.GetComponent<endTextHandler>().doanim = true;
                 Camera.main.GetComponent<endTextHandler>().Timer = 5.5f;
                 Camera.main.GetComponent<VideoPlayer>().enabled = true;
+                allObjects.SetActive(false);
+            }
+            if( Timer <= 0&& isWebGL)
+            {
+                Camera.main.GetComponent<endTextHandler>().doanim = true;
+                Camera.main.GetComponent<endTextHandler>().Timer = 2f;
+                webGlImage.SetActive(true);
                 allObjects.SetActive(false);
             }
 
