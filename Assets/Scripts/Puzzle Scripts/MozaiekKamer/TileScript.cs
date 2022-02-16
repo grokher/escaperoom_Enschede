@@ -27,10 +27,12 @@ public class TileScript : MonoBehaviour
 
     void MoveTile()
     {
-        if (puzzle.GetComponent<SlidingGame>().hasClicked == true || puzzle.GetComponent<SlidingGame>().hasShuffledOnce == true)
+        if (puzzle.GetComponent<SlidingGame>().hasClicked == true)
         {
             transform.position = Vector3.Lerp(transform.position, targetPosition, 0.05f);
         }
+        if(puzzle.GetComponent<SlidingGame>().hasShuffledOnce == true)
+            transform.position = Vector3.Lerp(transform.position, targetPosition, 0.05f);
         if (puzzle.GetComponent<SlidingGame>().hasShuffled == true)
         {
             correctX = Mathf.Abs(transform.position.x - beginPos.x);

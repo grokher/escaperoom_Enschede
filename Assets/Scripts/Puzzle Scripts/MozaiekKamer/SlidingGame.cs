@@ -62,8 +62,12 @@ public class SlidingGame : MonoBehaviour
                     yield return new WaitForSeconds(0.9f);
                     if (clickTimes == 0)
                     {
-                        clickTimes = 1; //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA I did it :)
-                    }
+                        if (Vector3.Distance(thisTile.transform.position, thisTile.targetPosition) < 0.001f)
+                        {
+                            clickTimes = 1; //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA I did it :)
+                            hasClicked = false;
+                        }
+                        }
                 }
                 else
                     Debug.Log("is not adjecent to empty");  
@@ -71,7 +75,7 @@ public class SlidingGame : MonoBehaviour
             else
                 Debug.Log("has not hit");
 
-            hasClicked = false;
+            
         }
         int correctTiles = 0;
         foreach (var a in tiles)
